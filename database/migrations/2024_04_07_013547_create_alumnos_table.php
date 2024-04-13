@@ -17,6 +17,8 @@ class CreateAlumnosTable extends Migration
             $table->integer('id_alumno')->primary();
             $table->string('nombre_alumno');
             $table->string('Curso');
+            $table->string('domicilio');
+
 
         });
     }
