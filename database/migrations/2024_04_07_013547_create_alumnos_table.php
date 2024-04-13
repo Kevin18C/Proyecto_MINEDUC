@@ -18,7 +18,9 @@ class CreateAlumnosTable extends Migration
             $table->string('nombre_alumno');
             $table->string('Curso');
             $table->string('domicilio');
-            $table->string('color_de_casa');
+            $table->string('domicilio');
+            $table->string('color');
+
 
 
 
