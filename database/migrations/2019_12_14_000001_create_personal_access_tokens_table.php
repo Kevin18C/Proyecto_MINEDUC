@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePersonalAccessTokensTable extends Migration
 {
+    /** Prueba */
     /**
      * Run the migrations.
      *
