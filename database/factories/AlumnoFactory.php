@@ -14,7 +14,8 @@ class AlumnoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre_alumno'=>$this->faker->name,
+            'Curso'=>$this->faker->randomElement(['Filosofia', 'Historia', 'Comunicacion y Lenguaje', 'Ciencias Naturales', 'Ciencias Sociales', 'Expresion Artistica']),
         ];
     }
 }
