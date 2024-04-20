@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Alumno;
+use App\Models\Catedratico;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,6 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Alumno::factory(100)->create();
+        Catedratico::factory(20)->create();
 
         $this->call(DepartamentoSeeder::class);
         $this->call(MunicipioSeeder::class);
