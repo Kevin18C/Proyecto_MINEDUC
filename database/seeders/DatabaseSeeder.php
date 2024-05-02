@@ -19,6 +19,8 @@ class DatabaseSeeder extends Seeder
         Alumno::factory(100)->create();
         Catedratico::factory(20)->create();
 
+
+        $this->call(GradoSeeder::class);
         $this->call(DepartamentoSeeder::class);
         $this->call(MunicipioSeeder::class);
 

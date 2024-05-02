@@ -16,11 +16,10 @@ class CreateMunicipiosTable extends Migration
         Schema::create('municipios', function (Blueprint $table) {
             $table->id();
             $table->string('municipio');
-            $table->unsignedBigInteger('id_departamento')->nullable();
-
-            $table->foreign('id_departamento')->references('id')->on('departamentos')->onDelete('no action');
-
+            $table->unsignedBigInteger("id_departamento");
             $table->timestamps();
+
+            $table->foreign('id_departamento')->references('id')->on('departamentos');
         });
     }
 
@@ -34,3 +33,4 @@ class CreateMunicipiosTable extends Migration
         Schema::dropIfExists('municipios');
     }
 }
+

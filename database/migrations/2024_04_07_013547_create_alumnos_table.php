@@ -14,7 +14,7 @@ class CreateAlumnosTable extends Migration
     public function up()
     {
         Schema::create('alumnos', function (Blueprint $table) {
-            $table->increments('id_alumno');
+            $table->id();
             $table->string('nombre_alumno');
             $table->string('Curso');
             $table->timestamps(); // Agregara las columnas created_at y updated_at

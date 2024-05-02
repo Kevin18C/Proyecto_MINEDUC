@@ -5,17 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Departamento extends Model
+class Grados extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'id',
-        'departamento'
+        'id_grado',
+        'grado'
     ];
 
-    public function municipios()
+    public function alumnos()
     {
-        return $this->hasMany(Municipio::class);
+        return $this->hasMany(Alumno::class);
     }
 }

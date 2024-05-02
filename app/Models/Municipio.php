@@ -14,4 +14,8 @@ class Municipio extends Model
         ' id_departamento'
 
     ];
+    public function departamento()
+    {
+        return $this->belongsTo(Departamento::class); 
+    }
 }

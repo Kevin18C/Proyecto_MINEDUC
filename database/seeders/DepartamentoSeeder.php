@@ -15,26 +15,34 @@ class DepartamentoSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('departamentos')->insert([
-            'id' => '1',
-            'departamento' => 'Izabal',
-        ]);
+        $departamentos = [
+            ["Izabal"],
+            ["Baja Verapaz"],
+            ["El Progreso"],
+            ["Zacapa"],
+            ["Alta Verapaz"],
+            ["Chimaltenango"],
+            ["Chiquimula"],
+            ["Guatemala"],
+            ["Huehuetenango"],
+            ["Ichigán"],
+            ["Jalapa"],
+            ["Jutiapa"],
+            ["Petén"],
+            ["Quiché"],
+            ["Retalhuleu"],
+            ["San Marcos"],
+            ["Santa Rosa"],
+            ["Sololá"],
+            ["Suchitepéquez"],
+            ["Totonicapán"],
+        ];
 
-        DB::table('departamentos')->insert([
-            'id' => '2',
-            'departamento' => 'Baja Verapaz',
-        ]);
-
-        DB::table('departamentos')->insert([
-            'id' => '3',
-            'departamento' => 'El Progreso',
-        ]);
-
-        DB::table('departamentos')->insert([
-            'id' => '4',
-            'departamento' => 'Zacapa',
-        ]);
-
+        foreach ($departamentos as $departamento) {
+            DB::table('departamentos')->insert([
+                'departamento' => $departamento[0],
+            ]);
+        }
     }
 }
 
