@@ -442,6 +442,74 @@ class MunicipioSeeder extends Seeder
                 "departamento" => "Escuintla",
                 "municipio" => "Nueva Concepción"
             ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Amatitlán"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Chinautlar"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Chuarrancho"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Ciudad de Guatemala"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Fraijanes"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Mixco"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Palencia"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San José del Golfo"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San José Pinula"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San Juan Sacatepéquez"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San Miguel Petapa"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San Pedro Ayampuc"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San Pedro Sacatepéquez"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "San Raymundo"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Santa Catarina Pinula"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Villa Canales"
+            ],
+            [
+                "departamento" => "Guatemala",
+                "municipio" => "Villa Nueva"
+            ],
 
         ];
 
