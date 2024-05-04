@@ -390,6 +390,58 @@ class MunicipioSeeder extends Seeder
                 "departamento" => "Quiché",
                 "municipio" => "Pachalum"
             ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Escuintla —cabecera departamental—"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "La Democracia"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Santa Lucía Cotzumalguapa"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Siquinalá"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Masagua"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Tiquisate"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "La Gomera"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Guaganazapa"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "San José"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Iztapa"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Palín"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "San Vicente Pacaya"
+            ],
+            [
+                "departamento" => "Escuintla",
+                "municipio" => "Nueva Concepción"
+            ],
 
         ];
 
