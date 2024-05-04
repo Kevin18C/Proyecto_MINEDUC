@@ -301,11 +301,95 @@ class MunicipioSeeder extends Seeder
                 "departamento" => "El Progreso",
                 "municipio" => "Guastatoya - Cabecera departamental"
             ],
+
             [
                 "departamento" => "El Progreso",
                 "municipio" => "Sansare"
             ],
-
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Santa Cruz del Quiché"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Chiché"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Chinique"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Zacualpa"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Chajul"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Santo Tomás Chichicastenango"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Patzité"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "San Antonio Ilotenango"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "San Pedro Jocopilas"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Cunén"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "San Juan Cotzal"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Santa María Joyabaj"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Santa María Nebaj"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "San Andrés Sajcabajá"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Uspantán"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Sacapulas"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "San Bartolomé Jocotenango"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Canillá"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Chicamán"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Ixcán"
+            ],
+            [
+                "departamento" => "Quiché",
+                "municipio" => "Pachalum"
+            ],
 
         ];
 
