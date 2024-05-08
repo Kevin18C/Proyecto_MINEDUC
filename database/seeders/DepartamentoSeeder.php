@@ -21,11 +21,12 @@ class DepartamentoSeeder extends Seeder
             ["El Progreso"],
             ["Zacapa"],
             ["Alta Verapaz"],
+            ["Escuintla"],
             ["Chimaltenango"],
             ["Chiquimula"],
             ["Guatemala"],
             ["Huehuetenango"],
-            ["Ichigán"],
+            ["Quetzaltenango"],
             ["Jalapa"],
             ["Jutiapa"],
             ["Petén"],
@@ -36,6 +37,7 @@ class DepartamentoSeeder extends Seeder
             ["Sololá"],
             ["Suchitepéquez"],
             ["Totonicapán"],
+            ["Sacatepéquez"],
         ];
 
         foreach ($departamentos as $departamento) {
