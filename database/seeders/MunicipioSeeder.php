@@ -392,7 +392,7 @@ class MunicipioSeeder extends Seeder
             ],
             [
                 "departamento" => "Escuintla",
-                "municipio" => "Escuintla —cabecera departamental—"
+                "municipio" => "Escuintla"
             ],
             [
                 "departamento" => "Escuintla",
@@ -509,6 +509,847 @@ class MunicipioSeeder extends Seeder
             [
                 "departamento" => "Guatemala",
                 "municipio" => "Villa Nueva"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Huehuetenango"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Chiantla"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Malacatancito"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Cuilco"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Nentón"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Pedro Necta"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Jacaltenango"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Soloma"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Ixtahuacán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Santa Bárbara"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "La Libertad"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "La Democracia"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Miguel Acatán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Rafael La Independencia"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Todos Santos Cuchumatán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Juan Atitlán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Santa Eulalia"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Mateo Ixtatán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Colotenango"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Sebastián Huehuetenango"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Tectitán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Concepción Huista"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Juan Ixcoy"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Antonio Huista"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Santa Cruz Barillas"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Sebastián Coatán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Aguacatán"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Rafael Petzal"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "San Gaspar Ixchil"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Santiago Chimaltenango"
+            ],
+            [
+                "departamento" => "Huehuetenango",
+                "municipio" => "Santa Ana Huista"
+            ],
+            [
+                "departamento" => "Izabal",
+                "municipio" => "Morales"
+            ],
+            [
+                "departamento" => "Izabal",
+                "municipio" => "Los Amates"
+            ],
+            [
+                "departamento" => "Izabal",
+                "municipio" => "Livingston"
+            ],
+            [
+                "departamento" => "Izabal",
+                "municipio" => "El Estor"
+            ],
+            [
+                "departamento" => "Izabal",
+                "municipio" => "Puerto Barrios"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "Jalapa"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "San Pedro Pinula"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "San Luis Jilotepeque"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "San Manuel Chaparrón"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "San Carlos Alzatate"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "Monjas"
+            ],
+            [
+                "departamento" => "Jalapa",
+                "municipio" => "Mataquescuintla"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Jutiapa"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "El Progreso"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Santa Catarina Mita"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Agua Blanca"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Asunción Mita"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Yupiltepeque"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Atescatempa"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Jerez"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "El Adelanto"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Zapotitlán"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Comapa"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Jalpatagua"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Conguaco"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Moyuta"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Pasaco"
+            ],
+            [
+                "departamento" => "Jutiapa",
+                "municipio" => "Quesada"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Quetzaltenango"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Salcajá"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Juan Olintepeque"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Carlos Sija"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Sibilia"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Cabricán"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Cajolá"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Miguel Siguilá"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Palestina de Los Altos"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Juan Ostuncalco"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Mateo"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Concepción Chiquirichapa"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Martín Sacatepéquez"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Almolonga"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Cantel"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Huitán"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Zunil"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Colomba Costa Cuca"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "San Francisco La Unión"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "El Palmar"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Coatepeque"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Génova"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "Flores Costa Cuca"
+            ],
+            [
+                "departamento" => "Quetzaltenango",
+                "municipio" => "La Esperanza"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "Retalhuleu"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "San Sebastián"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "Santa Cruz Muluá"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "San Martín Zapotitlán"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "San Felipe"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "San Andrés Villa Seca"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "Champerico"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "Nuevo San Carlos"
+            ],
+            [
+                "departamento" => "Retalhuleu",
+                "municipio" => "El Asintal"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Antigua Guatemala"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Jocotenango"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Pastores"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Sumpango"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Santo Domingo Xenacoj"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Santiago Sacatepéquez"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "San Bartolomé Milpas Altas"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "San Lucas Sacatepéquez"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Santa Lucía Milpas Altas"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Magdalena Milpas Altas"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Santa María de Jesús"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Ciudad Vieja"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "San Miguel Dueñas"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "San Juan Alotenango"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "San Antonio Aguas Calientes"
+            ],
+            [
+                "departamento" => "Sacatepéquez",
+                "municipio" => "Santa Catarina Barahona"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Marcos"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Ayutla"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Catarina"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Comitancillo"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Concepción Tutuapa"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "El Quetzal"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "El Rodeo"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "El Tumblador"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Ixchiguán"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "La Reforma"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Malacatán"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Nuevo Progreso"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Ocós"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Pajapita"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Esquipulas Palo Gordo"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Antonio Sacatepéquez"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Cristóbal Cucho"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San José Ojetenam"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Lorenzo"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Miguel Ixtahuacán"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Pablo"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Pedro Sacatepéquez"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "San Rafael Pie de la Cuesta"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Sibinal"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Sipacapa"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Tacaná"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Tajumulco"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Tejutla"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "Río Blanco"
+            ],
+            [
+                "departamento" => "San Marcos",
+                "municipio" => "La Blanca"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Cuilapa"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Casillas Santa Rosa"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Chiquimulilla
+"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Guazacapán"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Nueva Santa Rosa"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Oratorio"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Pueblo Nuevo Viñas"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "San Juan Tecuaco"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "San Rafael Las Flores"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Santa Cruz Naranjo"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Santa María Ixhuatán"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Santa Rosa de Lima"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Taxisco"
+            ],
+            [
+                "departamento" => "Santa Rosa",
+                "municipio" => "Barberena"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Sololá "
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Concepción"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Nahualá"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Panajachel"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Andrés Semetabaj"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Antonio Palopó"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San José Chacayá"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Juan La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Lucas Tolimán"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Marcos La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Pablo La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "San Pedro La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa Catarina Ixtahuacán"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa Catarina Palopó"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa Clara La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa Cruz La Laguna"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa Lucía Utatlán"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santa María Visitación"
+            ],
+            [
+                "departamento" => "Sololá",
+                "municipio" => "Santiago Atitlán"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Mazatenango"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Cuyotenango"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Francisco Zapotitlán"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Bernardino"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San José El Ídolo"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Santo Domingo Suchitépequez"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Lorenzo"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Samayac"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Pablo Jocopilas"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Antonio Suchitépequez"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Miguel Panán"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Gabriel"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Chicacao"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Patulul"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Santa Bárbara"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "San Juan Bautista"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Santo Tomás La Unión"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Zunilito"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Pueblo Nuevo"
+            ],
+            [
+                "departamento" => "Suchitepéquez",
+                "municipio" => "Río Bravo"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "Totonicapán"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "San Cristóbal Totonicapán"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "San Francisco El Alto"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "San Andrés Xecul"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "Momostenango"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "Santa María Chiquimula"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "Santa Lucía La Reforma"
+            ],
+            [
+                "departamento" => "Totonicapán",
+                "municipio" => "San Bartolo"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Cabañas"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Estanzuela"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Gualán"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Huité"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "La Unión"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Río Hondo"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "San Jorge"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "San Diego"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Teculután"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Usumatlán"
+            ],
+            [
+                "departamento" => "Zacapa",
+                "municipio" => "Zacapa"
             ],
 
         ];
