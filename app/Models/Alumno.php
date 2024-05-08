@@ -13,11 +13,16 @@ class Alumno extends Model
         'id',
         'nombre_alumno',
         'Curso',
-        'grado'
+        'grado_id', // Cambiado de 'grado' a 'grado_id' para reflejar la relación con la tabla 'grados'
     ];
+
+    public function tutelar()
+    {
+        return $this->belongsTo(Tutelar::class);
+    }
 
     public function grado()
     {
-        return $this->belongsTo(Grados::class);
+        return $this->belongsTo(Grado::class);
     }
 }

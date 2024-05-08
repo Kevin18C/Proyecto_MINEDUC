@@ -11,11 +11,11 @@ class Municipio extends Model
     protected $fillable = [
         'id',
         'municipio',
-        ' id_departamento'
+        'id_departamento'
 
     ];
     public function departamento()
     {
-        return $this->belongsTo(Departamento::class); 
+        return $this->belongsTo(Departamento::class);
     }
 }
