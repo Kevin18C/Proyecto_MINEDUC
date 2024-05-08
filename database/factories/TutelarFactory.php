@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Tutelar;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TutelarFactory extends Factory
@@ -14,7 +15,12 @@ class TutelarFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'nombre_tutelar' => $this->faker->name,
+            'id_alumno' => function () {
+                // Puedes utilizar una consulta aquí para obtener un ID de alumno existente
+                // Por ejemplo, para obtener un ID aleatorio de un alumno:
+                return \App\Models\Alumno::inRandomOrder()->first()->id;
+            },
         ];
     }
 }
