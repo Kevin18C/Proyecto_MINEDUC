@@ -12,7 +12,6 @@ class Alumno extends Model
     protected $fillable=[
         'id',
         'nombre_alumno',
-        'Curso',
         'grado_id', // Cambiado de 'grado' a 'grado_id' para reflejar la relación con la tabla 'grados'
     ];
 
@@ -23,6 +22,6 @@ class Alumno extends Model
 
     public function grado()
     {
-        return $this->belongsTo(Grado::class);
+        return $this->belongsTo(Grado::class, 'grado_id');
     }
 }

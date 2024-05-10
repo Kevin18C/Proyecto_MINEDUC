@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AlumnoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +22,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Ruta para mostrar la lista de alumnos
-Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
+Route::get('/alumnos', 'App\Http\Controllers\AlumnoController@index')->name('alumnos.index');
+Route::get('/alumnos/create', 'App\Http\Controllers\AlumnoController@create')->name('alumnos.create');
 
-Route::get('/alumnos/create', 'AlumnoController@create')->name('alumnos.create');
-
+Route::get('/catedraticos', 'App\Http\Controllers\CatedraticoController@index')->name('catedraticos.index');
+Route::get('/tutores', 'App\Http\Controllers\TutelarController@index')->name('tutores.index');

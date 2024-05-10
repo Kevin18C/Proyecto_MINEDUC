@@ -35,3 +35,4 @@ class CreateCatedraticosTable extends Migration
         Schema::dropIfExists('catedraticos');
     }
 }
+
