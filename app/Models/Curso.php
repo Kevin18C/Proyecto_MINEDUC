@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Grado extends Model
+class Curso extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'id_grado',
-        'grado'
+        'id_curso',
+        'nombre_curso'
     ];
-
-    public function alumnos()
-    {
-        return $this->hasMany(Alumno::class, 'grado_id');
-    }
 }

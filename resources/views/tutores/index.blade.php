@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Alumnos</title>
+    <title>Lista de Tutelares</title>
     <style>
         /* Estilos CSS */
         body {
@@ -51,7 +51,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Lista de Alumnos</h1>
+    <h1>Lista de Tutelares</h1>
 
     <a href="{{ route('alumnos.create') }}" class="add-button">Agregar Nuevo Alumno</a>
 
@@ -60,15 +60,15 @@
         <tr>
             <th>ID</th>
             <th>Nombre</th>
-            <th>Grado</th>
+            <th>ID Alumno</th>
         </tr>
         </thead>
         <tbody>
-        @foreach($alumnos as $alumno)
+        @foreach($tutores as $tutor)
             <tr>
-                <td>{{ $alumno->id }}</td>
-                <td>{{ $alumno->nombre_alumno }}</td>
-                <td>{{ $alumno->grado_id }}</td>
+                <td>{{ $tutor->id_tutelar }}</td>
+                <td>{{ $tutor->nombre_tutelar }}</td>
+                <td>{{ $tutor->id_alumno }}</td>
             </tr>
         @endforeach
         </tbody>
@@ -76,3 +76,5 @@
 </div>
 </body>
 </html>
+
+

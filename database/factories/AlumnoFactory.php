@@ -15,7 +15,7 @@ class AlumnoFactory extends Factory
     {
         return [
             'nombre_alumno'=>$this->faker->name,
-            'Curso'=>$this->faker->randomElement(['Filosofia', 'Historia', 'Comunicacion y Lenguaje', 'Ciencias Naturales', 'Ciencias Sociales', 'Expresion Artistica']),
+            'grado_id'=>$this->faker->randomElement(['Filosofia', 'Historia', 'Comunicacion y Lenguaje', 'Ciencias Naturales', 'Ciencias Sociales', 'Expresion Artistica']),
         ];
     }
 }

@@ -16,7 +16,7 @@ class CreateAlumnosTable extends Migration
         Schema::create('alumnos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_alumno');
-            $table->string('Curso');
+            $table->string('grado_id');
             $table->timestamps(); // Agregara las columnas created_at y updated_at
 
 
