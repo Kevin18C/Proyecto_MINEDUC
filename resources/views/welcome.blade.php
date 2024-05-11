@@ -233,13 +233,6 @@
 
 
 
-
-
-
-
-
-
-
     {{-- Codigo Header --}}
 
     <header>
@@ -254,15 +247,15 @@
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
                             <a href="{{ route('welcome') }}" class="nav-link text-secondary">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#home" />
                                 </svg>
-                                Home
+                                Inicio
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('alumnos.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#table" />
                                 </svg>
                                 Alumnos
@@ -270,7 +263,7 @@
                         </li>
                         <li>
                             <a href="{{ route('catedraticos.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#table" />
                                 </svg>
                                 Catedraticos
@@ -278,7 +271,7 @@
                         </li>
                         <li>
                             <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#grid" />
                                 </svg>
                                 Grados
@@ -286,7 +279,7 @@
                         </li>
                         <li>
                             <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#people-circle" />
                                 </svg>
                                 Cursos
@@ -294,12 +287,12 @@
                         </li>
                         <li>
                             <a href="{{ route('tutores.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#people-circle" />
                                 </svg>
                                 Tutores
                             </a>
-                        
+
                     </ul>
                 </div>
             </div>
@@ -589,7 +582,7 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
 
-                <span class="mb-3 mb-md-0 text-body-secondary"> 2024 Proyecto MINEDUC umg </span>
+                <span class="mb-3 mb-md-0 text-body-secondary"> Proyecto MINEDUC UMG - 2024 / Todos los derechos reservados. </span>
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
