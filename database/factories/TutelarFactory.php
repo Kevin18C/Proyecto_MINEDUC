@@ -16,11 +16,8 @@ class TutelarFactory extends Factory
     {
         return [
             'nombre_tutelar' => $this->faker->name,
-            'id_alumno' => function () {
-                // Puedes utilizar una consulta aquí para obtener un ID de alumno existente
-                // Por ejemplo, para obtener un ID aleatorio de un alumno:
-                return \App\Models\Alumno::inRandomOrder()->first()->id;
-            },
+            'id_alumno' => $this->faker->randomElement(range(1,100)),
+
         ];
     }
 }

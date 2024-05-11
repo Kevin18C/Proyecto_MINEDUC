@@ -24,4 +24,13 @@ class Alumno extends Model
     {
         return $this->belongsTo(Grado::class, 'grado_id');
     }
+
+    public function departamento()
+    {
+        return $this->belongsTo(Departamento::class);
+    }
+    public function municipio()
+    {
+        return $this->belongsTo(Municipio::class);
+    }
 }

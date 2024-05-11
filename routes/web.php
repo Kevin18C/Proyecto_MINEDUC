@@ -27,3 +27,10 @@ Route::get('/alumnos/create', 'App\Http\Controllers\AlumnoController@create')->n
 
 Route::get('/catedraticos', 'App\Http\Controllers\CatedraticoController@index')->name('catedraticos.index');
 Route::get('/tutores', 'App\Http\Controllers\TutelarController@index')->name('tutores.index');
+
+
+use App\Http\Controllers\WelcomeController;
+
+Route::get('/', [WelcomeController::class, 'index']);
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+

@@ -16,15 +16,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Crea los alumnos y asigna aleatoriamente un grado a cada uno
-        $this->call([GradoSeeder::class, AlumnoSeeder::class]);
 
-        // Crea los catedráticos y tutores
+// Crea los departamentos y municipios
+        $this->call(DepartamentoSeeder::class);
+        $this->call(MunicipioSeeder::class);
+
+        
+        Alumno::factory(100)->create();
         Catedratico::factory(20)->create();
         Tutelar::factory()->count(100)->create();
 
-        // Crea los departamentos y municipios
-        $this->call(DepartamentoSeeder::class);
-        $this->call(MunicipioSeeder::class);
+
+
     }
 }

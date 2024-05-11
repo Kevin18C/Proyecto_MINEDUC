@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link href="{{ asset('assets/dist/css/headers.css') }}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
     <script src="{{ asset('assets/js/color-modes.js') }}"></script>
     <script src="{{ asset('assets/js/sidebars.js') }}"></script>
+
 
     <link href="{{ asset('assets/dist/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -250,7 +253,7 @@
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="#" class="nav-link text-secondary">
+                            <a href="{{ route('welcome') }}" class="nav-link text-secondary">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#home" />
                                 </svg>
@@ -258,19 +261,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
-                                    <use xlink:href="#speedometer2" />
-                                </svg>
-                                Dashboard
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
+                            <a href="{{ route('alumnos.index') }}" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#table" />
                                 </svg>
-                                Orders
+                                Alumnos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('catedraticos.index') }}" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Catedraticos
                             </a>
                         </li>
                         <li>
@@ -278,7 +281,7 @@
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#grid" />
                                 </svg>
-                                Products
+                                Grados
                             </a>
                         </li>
                         <li>
@@ -286,9 +289,17 @@
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#people-circle" />
                                 </svg>
-                                Customers
+                                Cursos
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('tutores.index') }}" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#people-circle" />
+                                </svg>
+                                Tutores
+                            </a>
+                        
                     </ul>
                 </div>
             </div>
@@ -299,10 +310,7 @@
                     <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
                 </form>
 
-                <div class="text-end">
-                    <button type="button" class="btn btn-light text-dark me-2">Login</button>
-                    <button type="button" class="btn btn-primary">Sign-up</button>
-                </div>
+
             </div>
         </div>
     </header>
@@ -397,28 +405,171 @@
 
                     {{-- Codigo Principal --}}
                         <div class="row">
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Special title treatment</h5>
-                                        <p class="card-text">With supporting text below as a natural lead-in to additional
-                                            content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
 
 
+                            <!-- Incluye la biblioteca Chart.js -->
+                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                                <div class="col-md-11">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cantidad de alumnos por municipio</h5>
+
+                                                        <!-- Gráfico de alumnos por municipio -->
+                                                    <div class="chart-container">
+                                                        <canvas id="graficoAlumnosPorMunicipio"></canvas>
+                                                    </div>
+                                                </div>
+
+                                                <script>
+                                                    // JavaScript para generar el gráfico utilizando los datos en $datosGrafico
+                                                    var datosGrafico = {!! json_encode($datosGrafico) !!};
+
+                                                    var ctx = document.getElementById('graficoAlumnosPorMunicipio').getContext('2d');
+                                                    var myChart = new Chart(ctx, {
+                                                        type: 'doughnut', // Gráfico de pastel
+                                                        data: {
+                                                            labels: datosGrafico.labels,
+                                                            datasets: [{
+                                                                data: datosGrafico.data,
+                                                                backgroundColor: [
+                                                                    'rgba(255, 99, 132, 0.2)',
+                                                                    'rgba(54, 162, 235, 0.2)',
+                                                                    'rgba(255, 206, 86, 0.2)',
+                                                                    'rgba(75, 192, 192, 0.2)',
+                                                                    'rgba(153, 102, 255, 0.2)',
+                                                                    'rgba(255, 159, 64, 0.2)'
+                                                                    // Puedes agregar más colores si tienes más datos
+                                                                ],
+                                                                borderColor: [
+                                                                    'rgba(255, 99, 132, 1)',
+                                                                    'rgba(54, 162, 235, 1)',
+                                                                    'rgba(255, 206, 86, 1)',
+                                                                    'rgba(75, 192, 192, 1)',
+                                                                    'rgba(153, 102, 255, 1)',
+                                                                    'rgba(255, 159, 64, 1)'
+                                                                    // Puedes agregar más colores si tienes más datos
+                                                                ],
+                                                                borderWidth: 1
+                                                            }]
+                                                        },
+                                                        options: {
+                                                            cutout: 0, // Sin espacio en medio
+                                                            plugins: {
+                                                                legend: false, // No mostrar leyenda
+                                                                tooltip: {
+                                                                    callbacks: {
+                                                                        label: function(context) {
+                                                                            return context.label + ': ' + context.formattedValue; // Mostrar el nombre y el valor
+                                                                        }
+                                                                    }
+                                                                }
+                                                            },
+                                                            responsive:true,
+                                                            maintainAspectRatio:false,
+                                                            aspectRatio:1
+                                                        }
+                                                    });
+                                                </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Total de alumnos por departamento</h5>
+
+                                            <div class="chart-container">
+                                                <canvas id="graficoAlumnosPorDepartamento"></canvas>
+                                            </div>
+
+                                            <script>
+                                                // JavaScript para generar el gráfico utilizando los datos en $datosGrafico
+                                                var datosGrafico1 = {!! json_encode($datosGrafico1) !!};
+
+                                                var ctx = document.getElementById('graficoAlumnosPorDepartamento').getContext('2d');
+                                                var myChart = new Chart(ctx, {
+                                                    type: 'doughnut', // Gráfico de pastel
+                                                    data: {
+                                                        labels: datosGrafico1.labels,
+                                                        datasets: [{
+                                                            data: datosGrafico1.data,
+                                                            backgroundColor: [
+                                                                'rgba(255, 99, 132, 0.2)',
+                                                                'rgba(54, 162, 235, 0.2)',
+                                                                'rgba(255, 206, 86, 0.2)',
+                                                                'rgba(75, 192, 192, 0.2)',
+                                                                'rgba(153, 102, 255, 0.2)',
+                                                                'rgba(255, 159, 64, 0.2)'
+                                                                // Puedes agregar más colores si tienes más datos
+                                                            ],
+                                                            borderColor: [
+                                                                'rgba(255, 99, 132, 1)',
+                                                                'rgba(54, 162, 235, 1)',
+                                                                'rgba(255, 206, 86, 1)',
+                                                                'rgba(75, 192, 192, 1)',
+                                                                'rgba(153, 102, 255, 1)',
+                                                                'rgba(255, 159, 64, 1)'
+                                                                // Puedes agregar más colores si tienes más datos
+                                                            ],
+                                                            borderWidth: 1
+                                                        }]
+                                                    },
+                                                    options: {
+                                                        cutout: 0, // Sin espacio en medio
+                                                        plugins: {
+                                                            legend: false, // No mostrar leyenda
+                                                            tooltip: {
+                                                                callbacks: {
+                                                                    label: function(context) {
+                                                                        return context.label + ': ' + context.formattedValue; // Mostrar el nombre y el valor
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        responsive:true,
+                                                        maintainAspectRatio:false,
+                                                        aspectRatio:1
+                                                    }
+                                                });
+                                            </script>
+
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body d-flex justify-content-between align-items-center">
+                                                <h5 class="card-title mb-0">Total de Alumnos</h5>
+                                                <!-- Icono de estudiante -->
+
+                                                <!-- Fin del icono de estudiante -->
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="card-text">{{ $totalAlumnos }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="card">
+                                            <div class="card-body d-flex justify-contente-between align-item-center">
+                                                <h5 class="card-title mb-0">Total de Catedraticos</h5>
+
+                                            </div>
+
+                                            <div class="card-body">
+                                                <p class="card-text">{{ $totalCatedraticos }}</p>
+
+
+                                        </div>
+                                    </div>
+                                </div>
 
 
 

@@ -17,9 +17,12 @@ class CreateAlumnosTable extends Migration
             $table->id();
             $table->string('nombre_alumno');
             $table->string('grado_id');
+            $table->unsignedBigInteger("id_departamento");
+            $table->unsignedBigInteger('id_municipio');
             $table->timestamps(); // Agregara las columnas created_at y updated_at
 
-
+            $table->foreign('id_departamento')->references('id')->on('departamentos');
+            $table->foreign('id_municipio')->references('id')->on('municipios');
 
 
 
