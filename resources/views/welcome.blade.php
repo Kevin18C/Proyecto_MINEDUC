@@ -580,6 +580,22 @@
                                 </div>
                             </div>
 
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <div class="card-body d-flex justify-contente-between align-item-center">
+                                        <h5 class="card-title mb-0">Total de alumnos por grado de cada escuela</h5>
+
+                                    </div>
+
+                                    <div class="card-body">
+
+                                        <a class="card-text" href="{{route('alumnos.algra') }}">ver</a>
+
+
+                                </div>
+                            </div>
+                        </div>
+
 
 
 

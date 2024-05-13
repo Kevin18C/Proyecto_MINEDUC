@@ -6,6 +6,7 @@ use App\Http\Controllers\AlumnoController;
 use App\Http\Controllers\CatedraticoController;
 use App\Http\Controllers\TutelarController;
 use App\Http\Controllers\alescController;
+use App\Http\Controllers\AlgraController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
@@ -21,3 +22,6 @@ Route::get('/tutores', [TutelarController::class, 'index'])->name('tutores.index
 
 // Ruta para mostrar la lista de escuelas y sus alumnos
 Route::get('/alumnos/alesc', [alescController::class, 'index'])->name('alumnos.alesc');
+
+// Ruta para mostrar la lista de escuelas y su cantidad de alumnos por grado
+Route::get('/alumnos.algra',[AlgraController::class,'index'])->name('alumnos.algra');
