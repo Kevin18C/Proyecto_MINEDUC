@@ -11,6 +11,6 @@ class Catedratico extends Model
 
     public function alumnos()
     {
-        return $this->hasMany(Alumno::class);
+        return $this->hasMany(Alumno::class, 'id_catedratico', 'id');
     }
 }

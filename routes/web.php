@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlcatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\AlumnoController;
@@ -25,3 +26,6 @@ Route::get('/alumnos/alesc', [alescController::class, 'index'])->name('alumnos.a
 
 // Ruta para mostrar la lista de escuelas y su cantidad de alumnos por grado
 Route::get('/alumnos.algra',[AlgraController::class,'index'])->name('alumnos.algra');
+
+// Ruta para mostrar la cantidad de alumnos por catedratico
+Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedraticos.alcat');
