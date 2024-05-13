@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Catedratico extends Model
 {
     use HasFactory;
+
+    public function alumnos()
+    {
+        return $this->hasMany(Alumno::class);
+    }
 }

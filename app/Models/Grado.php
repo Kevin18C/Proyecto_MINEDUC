@@ -13,9 +13,10 @@ class Grado extends Model
         'id_grado',
         'grado'
     ];
-
     public function alumnos()
     {
-        return $this->hasMany(Alumno::class, 'grado_id');
+        return $this->hasMany(Alumno::class, 'id_grado');
     }
+
+
 }

@@ -1,36 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-// Ruta para mostrar la lista de alumnos
-Route::get('/alumnos', 'App\Http\Controllers\AlumnoController@index')->name('alumnos.index');
-Route::get('/alumnos/create', 'App\Http\Controllers\AlumnoController@create')->name('alumnos.create');
-
-Route::get('/catedraticos', 'App\Http\Controllers\CatedraticoController@index')->name('catedraticos.index');
-Route::get('/tutores', 'App\Http\Controllers\TutelarController@index')->name('tutores.index');
-
-
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\AlumnoController;
+use App\Http\Controllers\CatedraticoController;
+use App\Http\Controllers\TutelarController;
+use App\Http\Controllers\alescController;
 
-Route::get('/', [WelcomeController::class, 'index']);
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
+// Rutas para los alumnos
+Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
+Route::get('/alumnos/create', [AlumnoController::class, 'create'])->name('alumnos.create');
+
+// Ruta para mostrar la lista de catedráticos
+Route::get('/catedraticos', [CatedraticoController::class, 'index'])->name('catedraticos.index');
+
+// Ruta para mostrar la lista de tutores
+Route::get('/tutores', [TutelarController::class, 'index'])->name('tutores.index');
+
+// Ruta para mostrar la lista de escuelas y sus alumnos
+Route::get('/alumnos/alesc', [alescController::class, 'index'])->name('alumnos.alesc');

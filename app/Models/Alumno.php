@@ -12,18 +12,18 @@ class Alumno extends Model
     protected $fillable=[
         'id',
         'nombre_alumno',
-        'grado_id', // Cambiado de 'grado' a 'grado_id' para reflejar la relación con la tabla 'grados'
+        'grado_id',
     ];
 
     public function tutelar()
     {
         return $this->belongsTo(Tutelar::class);
     }
-
     public function grado()
     {
-        return $this->belongsTo(Grado::class, 'grado_id');
+        return $this->belongsTo(Grado::class, 'id_grado');
     }
+
 
     public function departamento()
     {
@@ -32,5 +32,14 @@ class Alumno extends Model
     public function municipio()
     {
         return $this->belongsTo(Municipio::class);
+    }
+
+    public function catedratico()
+    {
+        return $this->belongsTo(Catedratico::class);
+    }
+    public function escuela()
+    {
+        return $this->belongsTo(Escuela::class,'id_escuela');
     }
 }
