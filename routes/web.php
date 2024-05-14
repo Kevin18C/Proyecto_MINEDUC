@@ -35,3 +35,8 @@ Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedr
 
 Route::delete('/alumnos/{id}', [AlumnoController::class, 'eliminar'])->name('alumnos.eliminar');
 
+
+Route::get('/tutores/create',[TutelarController::class,'create'])->name('tutores.create');
+Route::post('/tutores', [TutelarController::class,'store'])->name('tutores.store');
+
+Route::delete('/tutores/{id}', [TutelarController::class, 'destroy'])->name('tutores.destroy');

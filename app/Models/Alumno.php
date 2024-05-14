@@ -46,4 +46,5 @@ class Alumno extends Model
     {
         return $this->belongsTo(Seccion::class);
     }
+
 }

@@ -14,10 +14,11 @@ class CreateTutelarAlumnoTable extends Migration
     public function up()
     {
         Schema::create('tutelar_alumno', function (Blueprint $table) {
-            $table->bigIncrements('id_tutelar');
+            $table->id();
             $table->string('nombre_tutelar');
-            $table->integer('id_alumno');
-            $table->timestamps(); // Esto agrega las columnas 'created_at' y 'updated_at'
+            $table->unsignedBigInteger('id_alumno');
+            $table->timestamps(); 
+            $table->foreign('id_alumno')->references('id')->on('alumnos');
 
         });
     }

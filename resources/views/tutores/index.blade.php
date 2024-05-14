@@ -240,31 +240,48 @@
         </div>
     </header>
 
-<div class="container">
-    <h1>Lista de Tutelares</h1>
+    <div class="container">
+        <h1>Lista de Tutelares</h1>
 
-    <a href="{{ route('alumnos.create') }}" class="add-button">Agregar Nuevo Alumno</a>
+          <!-- Mensaje de error -->
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>ID Alumno</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($tutores as $tutor)
-            <tr>
-                <td>{{ $tutor->id_tutelar }}</td>
-                <td>{{ $tutor->nombre_tutelar }}</td>
-                <td>{{ $tutor->id_alumno }}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-</div>
-</body>
-</html>
+        <!-- Asegúrate de que esta sea la estructura adecuada para tu tabla -->
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Alumno</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($tutores as $tutor)
+                <tr>
+                    <td>{{ $tutor->id }}</td>
+                    <td>{{ $tutor->nombre_tutelar }}</td>
+                    <td>{{ $tutor->alumno->nombre_alumno }}</td>
+                    <td>
+                        <!-- Grupo de botones -->
+                        <div style="display: flex;">
+                            <!-- Botón de Agregar -->
+                            <a href="{{ route('tutores.create') }}" style="margin-right: 5px;"><button>Agregar</button></a>
 
-
+                            <!-- Botón de Eliminar -->
+                            <form action="{{ route('tutores.destroy', $tutor->id) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" onclick="return confirm('¿Estás seguro de eliminar este tutor?')">Eliminar</button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
