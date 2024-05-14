@@ -18,10 +18,12 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-// Crea los departamentos y municipios
+        $this->call(SeccionSeeder::class);
+
         $this->call(GradoSeeder::class);
         $this->call(DepartamentoSeeder::class);
         $this->call(MunicipioSeeder::class);
+        $this->call(CursoSeeder::class);
 
 
 
@@ -34,7 +36,6 @@ Escuela::factory()->count($cantidadEscuelas)->create();
         Alumno::factory(100)->create();
 
         Tutelar::factory()->count(100)->create();
-       // Especifica cuántas escuelas quieres crear
 
 
     }

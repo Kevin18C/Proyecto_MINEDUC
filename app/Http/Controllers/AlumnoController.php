@@ -15,4 +15,6 @@ class AlumnoController extends Controller
         // Pasar los registros recuperados a la vista
         return view('alumnos.index', ['alumnos' => $alumnos]);
     }
+
+    
 }

@@ -8,12 +8,15 @@ use App\Http\Controllers\CatedraticoController;
 use App\Http\Controllers\TutelarController;
 use App\Http\Controllers\alescController;
 use App\Http\Controllers\AlgraController;
+use App\Http\Controllers\CreateController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
 // Rutas para los alumnos
 Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumnos.index');
-Route::get('/alumnos/create', [AlumnoController::class, 'create'])->name('alumnos.create');
+
+Route::get('/alumnos/create', [CreateController::class, 'create'])->name('alumnos.create');
+Route::post('/alumnos', [CreateController::class, 'store']);
 
 // Ruta para mostrar la lista de catedráticos
 Route::get('/catedraticos', [CatedraticoController::class, 'index'])->name('catedraticos.index');
