@@ -240,29 +240,34 @@
         </div>
     </header>
 
-<div class="container">
-    <h1>Lista de Alumnos</h1>
+    <div class="container">
+        <h1>Lista de Alumnos</h1>
 
-    <a href="{{ route('alumnos.create') }}" class="add-button">Agregar Nuevo Alumno</a>
-
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Grado</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($alumnos as $alumno)
-            <tr>
-                <td>{{ $alumno->id }}</td>
-                <td>{{ $alumno->nombre_alumno }}</td>
-                <td>{{ $alumno->grado_id }}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-</div>
-</body>
-</html>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Grado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($alumnos as $alumno)
+                <tr>
+                    <td>{{ $alumno->id }}</td>
+                    <td>{{ $alumno->nombre_alumno }}</td>
+                    <td>{{ $alumno->grado_id }}</td>
+                    <td>
+                        <a href="{{ route('alumnos.create') }}" style="display: inline;"><button>Agregar</button></a>
+                        <form action="{{ route('alumnos.eliminar', $alumno->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar este alumno?')">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>

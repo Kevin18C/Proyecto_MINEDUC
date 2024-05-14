@@ -15,6 +15,12 @@ class AlumnoController extends Controller
         // Pasar los registros recuperados a la vista
         return view('alumnos.index', ['alumnos' => $alumnos]);
     }
+    public function eliminar($id)
+    {
+        $alumno = Alumno::findOrFail($id);
+        $alumno->delete();
 
-    
+        return redirect()->route('alumnos.index')->with('success', 'Alumno eliminado correctamente');
+    }
+
 }

@@ -32,3 +32,6 @@ Route::get('/alumnos.algra',[AlgraController::class,'index'])->name('alumnos.alg
 
 // Ruta para mostrar la cantidad de alumnos por catedratico
 Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedraticos.alcat');
+
+Route::delete('/alumnos/{id}', [AlumnoController::class, 'eliminar'])->name('alumnos.eliminar');
+
