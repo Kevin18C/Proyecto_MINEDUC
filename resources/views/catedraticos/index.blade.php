@@ -240,29 +240,40 @@
             </div>
         </div>
     </header>
-<div class="container">
-    <h1>Lista de Catedraticos</h1>
+    <div class="container">
+        <h1>Lista de Catedráticos</h1>
 
-    <a href="{{ route('alumnos.create') }}" class="add-button">Agregar Nuevo Catedratico</a>
-
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>curso</th>
-        </tr>
-        </thead>
-        <tbody>
-        @foreach($catedraticos as $catedratico)
-            <tr>
-                <td>{{ $catedratico->id_catedratico }}</td>
-                <td>{{ $catedratico->nombre_catedratico }}</td>
-                <td>{{ $catedratico->curso }}</td>
-            </tr>
-        @endforeach
-        </tbody>
-    </table>
-</div>
-</body>
-</html>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Curso</th>
+                    <th>Grado</th>
+                    <th>Sección</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($catedraticos as $catedratico)
+                <tr>
+                    <td>{{ $catedratico->id }}</td>
+                    <td>{{ $catedratico->nombre_catedratico }}</td>
+                    <td>{{ $catedratico->curso ? $catedratico->curso->Curso : '' }}</td>
+                    <td>{{ $catedratico->grado ? $catedratico->grado->Grado : '' }}</td>
+                    <td>{{ $catedratico->seccion ? $catedratico->seccion->Seccion : '' }}</td>
+                    <td>
+                        <a href="{{ route('catedraticos.create') }}" style="display: inline;"><button>Agregar</button></a>
+                        <form action="{{ route('catedraticos.destroy', $catedratico->id) }}" method="POST" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" onclick="return confirm('¿Estás seguro de eliminar este catedrático?')">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+    </body>
+    </html>

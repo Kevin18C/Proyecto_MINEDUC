@@ -16,10 +16,16 @@ class CreateCatedraticosTable extends Migration
         Schema::create('catedraticos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_catedratico');
-            $table->string('curso');
-            $table->integer('grado');
-            $table->string('seccion');
+           
+            $table->unsignedBigInteger('id_curso');
+            $table->unsignedBigInteger('id_grado');
+            $table->unsignedBigInteger('id_seccion');
             $table->timestamps(); // Agregara las columnas created_at y updated_at
+
+
+            $table->foreign('id_curso')->references('id')->on('cursos');
+            $table->foreign('id_grado')->references('id')->on('grados');
+            $table->foreign('id_seccion')->references('id')->on('secciones');
 
 
         });

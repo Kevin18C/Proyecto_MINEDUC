@@ -27,16 +27,16 @@ class Alumno extends Model
 
     public function departamento()
     {
-        return $this->belongsTo(Departamento::class);
+        return $this->belongsTo(Departamento::class,'id_departamento');
     }
     public function municipio()
     {
-        return $this->belongsTo(Municipio::class);
+        return $this->belongsTo(Municipio::class,'id_municipio');
     }
 
     public function catedratico()
     {
-        return $this->belongsTo(Catedratico::class);
+        return $this->belongsTo(Catedratico::class,'id_catedratico');
     }
     public function escuela()
     {
@@ -44,7 +44,10 @@ class Alumno extends Model
     }
     public function seccion()
     {
-        return $this->belongsTo(Seccion::class);
+        return $this->belongsTo(Seccion::class,'id_seccion');
     }
-
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class, 'id_curso');
+    }
 }

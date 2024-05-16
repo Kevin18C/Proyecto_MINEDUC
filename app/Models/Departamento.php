@@ -16,11 +16,11 @@ class Departamento extends Model
 
     public function municipios()
     {
-        return $this->hasMany(Municipio::class);
+        return $this->hasMany(Municipio::class,'id_departamento');
     }
 
     public function alumnos()
     {
-        return $this->hasMany(Alumno::class);
+        return $this->hasMany(Alumno::class,'id_departamento');
     }
 }

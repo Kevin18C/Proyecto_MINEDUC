@@ -11,11 +11,16 @@ class Grado extends Model
 
     protected $fillable = [
         'id_grado',
-        'grado'
+        'Grado'
     ];
     public function alumnos()
     {
         return $this->hasMany(Alumno::class, 'id_grado');
+    }
+
+    public function catedraticos()
+    {
+        return $this->hasMany(Catedratico::class,'id_grado');
     }
 
 

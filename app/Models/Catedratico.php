@@ -9,8 +9,25 @@ class Catedratico extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['nombre_catedratico', 'id_curso', 'id_grado', 'id_seccion'];
+
+    // Relación con la tabla Secciones
+    public function seccion()
+    {
+        return $this->belongsTo(Seccion::class, 'id_seccion');
+    }
+
     public function alumnos()
     {
         return $this->hasMany(Alumno::class, 'id_catedratico', 'id');
     }
+    public function grado()
+    {
+        return $this->belongsTo(Grado::class,'id_grado');
+    }
+    public function curso()
+    {
+        return $this->belongsTo(Curso::class,'id_curso');
+    }
+
 }

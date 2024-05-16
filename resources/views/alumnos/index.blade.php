@@ -248,7 +248,13 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
+                    <th>Catedrático</th>
+                    <th>Curso</th>
+                    <th>Sección</th>
                     <th>Grado</th>
+                    <th>Escuela</th>
+                    <th>Municipio</th>
+                    <th>Departamento</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -257,9 +263,17 @@
                 <tr>
                     <td>{{ $alumno->id }}</td>
                     <td>{{ $alumno->nombre_alumno }}</td>
-                    <td>{{ $alumno->grado_id }}</td>
+                    <td>{{ $alumno->catedratico ? $alumno->catedratico->nombre_catedratico : '' }}</td>
+                    <td>{{ $alumno->curso ? $alumno->curso->Curso : '' }}</td>
+                    <td>{{ $alumno->seccion ? $alumno->seccion->Seccion : '' }}</td>
+                    <td>{{ $alumno->grado ? $alumno->grado->Grado : '' }}</td>
+                    <td>{{ $alumno->escuela ? $alumno->escuela->Escuela : '' }}</td>
+                    <td>{{ $alumno->municipio ? $alumno->municipio->municipio : '' }}</td>
+                    <td>{{ $alumno->departamento ? $alumno->departamento->departamento : '' }}</td>
                     <td>
+
                         <a href="{{ route('alumnos.create') }}" style="display: inline;"><button>Agregar</button></a>
+
                         <form action="{{ route('alumnos.eliminar', $alumno->id) }}" method="POST" style="display: inline;">
                             @csrf
                             @method('DELETE')
@@ -271,3 +285,7 @@
             </tbody>
         </table>
     </div>
+
+</body>
+</html>
+

@@ -17,7 +17,7 @@ class CreateTutelarAlumnoTable extends Migration
             $table->id();
             $table->string('nombre_tutelar');
             $table->unsignedBigInteger('id_alumno');
-            $table->timestamps(); 
+            $table->timestamps();
             $table->foreign('id_alumno')->references('id')->on('alumnos');
 
         });

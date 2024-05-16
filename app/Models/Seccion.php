@@ -9,6 +9,16 @@ class Seccion extends Model
 {
     use HasFactory;
 
+    protected $table = 'secciones';
+
+    protected $fillable = ['Seccion'];
+
+    // Relación con la tabla Catedraticos
+    public function catedraticos()
+    {
+        return $this->hasMany(Catedratico::class, 'id_seccion');
+    }
+
     public function alumnos()
     {
         return $this->hasMany(Alumno::class);

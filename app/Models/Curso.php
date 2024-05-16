@@ -13,4 +13,9 @@ class Curso extends Model
         'id_curso',
         'nombre_curso'
     ];
+
+    public function catedraticos()
+    {
+        return $this->hasMany(Catedratico::class);
+    }
 }

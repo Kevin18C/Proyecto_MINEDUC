@@ -38,5 +38,9 @@ Route::delete('/alumnos/{id}', [AlumnoController::class, 'eliminar'])->name('alu
 
 Route::get('/tutores/create',[TutelarController::class,'create'])->name('tutores.create');
 Route::post('/tutores', [TutelarController::class,'store'])->name('tutores.store');
-
 Route::delete('/tutores/{id}', [TutelarController::class, 'destroy'])->name('tutores.destroy');
+
+
+Route::get('/catedraticos/create',[CatedraticoController::class, 'create'])->name('catedraticos.create');
+Route::post('/catedraticos',[CatedraticoController::class, 'store'])->name('catedraticos.store');
+Route::delete('/tutores/{id}',[CatedraticoController::class,'destroy'])->name('catedraticos.destroy');

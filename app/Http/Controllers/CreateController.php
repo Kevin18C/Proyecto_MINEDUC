@@ -4,12 +4,26 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Alumno;
+use App\Models\Curso;
+use App\Models\Departamento;
+use App\Models\Seccion;
+use App\Models\Grado;
+use App\Models\Escuela;
+use App\Models\Municipio;
+use App\Models\Catedratico;
 
 class CreateController extends Controller
 {
     public function create()
     {
-        return view('alumnos.create');
+        $cursos = Curso::all();
+        $secciones = Seccion::all();
+        $grados = Grado::all();
+        $escuelas = Escuela::all();
+        $departamentos = Departamento::all();
+        $municipios = Municipio::all();
+        $catedraticos = Catedratico::all();
+        return view('alumnos.create',compact('catedraticos','cursos','secciones','grados','escuelas','departamentos','municipios'));
     }
 
     public function store(Request $request)
