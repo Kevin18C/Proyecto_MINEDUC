@@ -6,110 +6,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Nuevo Alumno</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn-primary {
+            width: 100%;
+        }
+        .invalid-feedback {
+            display: block;
+        }
+    </style>
 </head>
 <body>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="form-container">
+                <h1 class="form-title">Crear Nuevo Alumno</h1>
 
-    <h1>Crear Nuevo Alumno</h1>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>¡Ups! Hubo un problema con los datos ingresados:</strong>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
-    @if ($errors->any())
-    <div>
-        <strong>¡Ups! Hubo un problema con los datos ingresados:</strong>
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+                <form action="{{ url('/alumnos') }}" method="post">
+                    @csrf
+
+                    <div class="form-group">
+                        <label for="nombre_alumno">Nombre del Alumno:</label>
+                        <input type="text" class="form-control @error('nombre_alumno') is-invalid @enderror" id="nombre_alumno" name="nombre_alumno" value="{{ old('nombre_alumno') }}">
+                        @error('nombre_alumno')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_catedratico">Catedrático:</label>
+                        <select class="form-control @error('id_catedratico') is-invalid @enderror" name="id_catedratico" id="id_catedratico">
+                            <option value="">Seleccione un catedrático</option>
+                            @foreach($catedraticos as $catedratico)
+                                <option value="{{ $catedratico->id }}">{{ $catedratico->nombre_catedratico }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_catedratico')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_curso">Curso:</label>
+                        <select class="form-control @error('id_curso') is-invalid @enderror" name="id_curso" id="id_curso">
+                            <option value="">Seleccione un curso</option>
+                            @foreach($cursos as $curso)
+                                <option value="{{ $curso->id }}">{{ $curso->Curso }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_curso')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_seccion">Sección:</label>
+                        <select class="form-control @error('id_seccion') is-invalid @enderror" name="id_seccion" id="id_seccion">
+                            <option value="">Seleccione una sección</option>
+                            @foreach($secciones as $seccion)
+                                <option value="{{ $seccion->id }}">{{ $seccion->Seccion }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_seccion')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_grado">Grado:</label>
+                        <select class="form-control @error('id_grado') is-invalid @enderror" name="id_grado" id="id_grado">
+                            <option value="">Seleccione un grado</option>
+                            @foreach($grados as $grado)
+                                <option value="{{ $grado->id }}">{{ $grado->Grado }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_grado')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_escuela">Escuela:</label>
+                        <select class="form-control @error('id_escuela') is-invalid @enderror" name="id_escuela" id="id_escuela">
+                            <option value="">Seleccione una escuela</option>
+                            @foreach($escuelas as $escuela)
+                                <option value="{{ $escuela->id }}">{{ $escuela->Escuela }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_escuela')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_departamento">Departamento:</label>
+                        <select class="form-control @error('id_departamento') is-invalid @enderror" name="id_departamento" id="id_departamento">
+                            <option value="">Seleccione un departamento</option>
+                            @foreach($departamentos as $departamento)
+                                <option value="{{ $departamento->id }}">{{ $departamento->departamento }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_departamento')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_municipio">Municipio:</label>
+                        <select class="form-control @error('id_municipio') is-invalid @enderror" name="id_municipio" id="id_municipio">
+                            <option value="">Seleccione un municipio</option>
+                            @foreach($municipios as $municipio)
+                                <option value="{{ $municipio->id }}">{{ $municipio->municipio }}</option>
+                            @endforeach
+                        </select>
+                        @error('id_municipio')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-3">Guardar Alumno</button>
+                </form>
+            </div>
+        </div>
     </div>
-@endif
+</div>
 
-<form action="{{ url('/alumnos') }}" method="post">
-    @csrf
-
-    <div>
-        <label for="nombre_alumno">Nombre del Alumno:</label>
-        <input type="text" id="nombre_alumno" name="nombre_alumno" value="{{ old('nombre_alumno') }}">
-    </div>
-
-    <div>
-        <label for="id_catedratico">Catedrático:</label>
-        <select name="id_catedratico" id="id_catedratico">
-             <option>Seleccione un catedratico</option>
-        @foreach($catedraticos as $catedratico)
-                <option value="{{ $catedratico->id }}">{{ $catedratico->nombre_catedratico }}</option>
-            @endforeach
-        </select>
-
-    </div>
-
-    <div>
-        <label for="id_curso">Curso:</label>
-        <select name="id_curso" id="id_curso">
-            <option value="">Selecciona un curso</option>
-            @foreach($cursos as $curso)
-                <option value="{{ $curso->id }}">{{ $curso->Curso }}</option>
-            @endforeach
-        </select>
-    </div>
-
-    <div>
-        <label for="id_seccion">Sección:</label>
-        <select name="id_seccion" id="id_seccion">
-            <option value="">Selecciona una sección</option>
-            @foreach($secciones as $seccion)
-                <option value="{{ $seccion->id }}">{{ $seccion->Seccion }}</option>
-            @endforeach
-        </select>
-    </div>
-
-    <div>
-        <label for="id_grado">Grado:</label>
-        <select name="id_grado" id="id_grado">
-            <option value="">Selecciona un grado</option>
-            @foreach($grados as $grado)
-                <option value="{{ $grado->id }}">{{ $grado->Grado }}</option>
-            @endforeach
-        </select>
-    </div>
-
-    <div>
-        <label for="id_escuela">Escuela:</label>
-        <select name="id_escuela" id="id_escuela">
-            <option value="">Selecciona una escuela</option>
-            @foreach($escuelas as $escuela)
-                <option value="{{ $escuela->id }}">{{ $escuela->Escuela }}</option>
-            @endforeach
-        </select>
-    </div>
-
-    <div>
-        <label for="id_departamento">Departamento:</label>
-        <select name="id_departamento" id="id_departamento">
-            <option value="">Selecciona un departamento</option>
-            @foreach($departamentos as $departamento)
-                <option value="{{ $departamento->id }}">{{ $departamento->departamento }}</option>
-            @endforeach
-        </select>
-    </div>
-
-
-
-    <div>
-        <label for="id_municipio">Municipio:</label>
-        <select name="id_municipio" id="id_municipio">
-            <option value="">Selecciona un municipio</option>
-            @foreach($municipios as $municipio)
-                <option value="{{ $municipio->id }}">{{ $municipio->municipio }}</option>
-            @endforeach
-        </select>
-    </div>
-
-    <!-- Agregar más campos según sea necesario -->
-
-    <button type="submit">Guardar Alumno</button>
-</form>
-
-
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
