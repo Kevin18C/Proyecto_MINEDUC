@@ -262,7 +262,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('catedraticos.index') }}" class="nav-link text-white">
+                            <a href="{{ route('alumnos.index') }}" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#table" />
                                 </svg>
@@ -292,6 +292,17 @@
                                 </svg>
                                 Tutores
                             </a>
+                        <li>
+                            <a href="{{ route('welcome') }}" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
+                                    <use xlink:href="#grid" />
+                                </svg>
+                                Horarios<!-- Agregué un nuevo ícono a la vista principal-->
+                            </a>
+                        </li>
+
+
+
 
                     </ul>
                 </div>
