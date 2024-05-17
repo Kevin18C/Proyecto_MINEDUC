@@ -637,11 +637,11 @@
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24"
+                <li class="ms-3"><a class="text-body-secondary" href="https://x.com/marianogalvez?lang=es"><svg class="bi" width="24"
                             height="24">
                             <use xlink:href="#twitter" />
                         </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24"
+                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/marianogalvez/?hl=es"><svg class="bi" width="24"
                             height="24">
                             <use xlink:href="#instagram" />
                         </svg></a></li>
