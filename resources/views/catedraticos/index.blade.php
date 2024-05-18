@@ -226,11 +226,12 @@
                                 Tutores
                             </a>
                         <li>
-                            <a href="{{ route('welcome') }}" class="nav-link text-white">
+                            <a href="{{ route('horarios.index') }}" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#grid" />
                                 </svg>
-                                Horarios<!-- Agregué un nuevo ícono a la vista catedráticos-->
+                                Horarios <!-- Agregué un nuevo ícono a la vista catedráticos-->
+                                <!-- Ahora ya se puede ver el calendario desde la vista catedráticos-->
                             </a>
                         </li>
 

@@ -246,7 +246,7 @@
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="{{ route('welcome') }}" class="nav-link text-secondary">
+                            <a href="{{ route('welcome') }}" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#home" />
                                 </svg>
