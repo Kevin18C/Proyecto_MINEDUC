@@ -9,6 +9,8 @@ use App\Http\Controllers\TutelarController;
 use App\Http\Controllers\alescController;
 use App\Http\Controllers\AlgraController;
 use App\Http\Controllers\CreateController;
+use App\Http\Controllers\horarioController;
+
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
@@ -32,6 +34,12 @@ Route::get('/alumnos.algra',[AlgraController::class,'index'])->name('alumnos.alg
 
 // Ruta para mostrar la cantidad de alumnos por catedratico
 Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedraticos.alcat');
+
+//Ruta para mostrar el horario
+//Route::get('/horarios', [horarioController::class, 'index'])->name('horarios.index');
+Route::get('/horario', [horarioController::class, 'index'])->name('horarios.index');
+
+
 
 Route::delete('/alumnos/{id}', [AlumnoController::class, 'eliminar'])->name('alumnos.eliminar');
 
