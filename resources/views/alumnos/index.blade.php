@@ -230,6 +230,7 @@
                                     <use xlink:href="#grid" />
                                 </svg>
                                 Horarios<!-- Agregué un nuevo ícono a la vista de alumnos-->
+                                <!-- Ahora ya se puede ver el calendario desde la vista alumnos-->
                             </a>
                         </li>
                     </ul>
@@ -292,6 +293,8 @@
             </tbody>
         </table>
     </div>
+
+
 
 </body>
 </html>
