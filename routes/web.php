@@ -51,4 +51,4 @@ Route::delete('/tutores/{id}', [TutelarController::class, 'destroy'])->name('tut
 
 Route::get('/catedraticos/create',[CatedraticoController::class, 'create'])->name('catedraticos.create');
 Route::post('/catedraticos',[CatedraticoController::class, 'store'])->name('catedraticos.store');
-Route::delete('/tutores/{id}',[CatedraticoController::class,'destroy'])->name('catedraticos.destroy');
+Route::delete('/catedraticos/{id}',[CatedraticoController::class,'destroy'])->name('catedraticos.destroy');
