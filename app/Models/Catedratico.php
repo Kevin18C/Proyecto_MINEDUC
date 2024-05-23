@@ -30,4 +30,9 @@ class Catedratico extends Model
         return $this->belongsTo(Curso::class,'id_curso');
     }
 
+    public function inscripciones()
+    {
+        return $this->hasMany(Inscripcion::class,'id_catedratico', 'id');
+    }
+
 }

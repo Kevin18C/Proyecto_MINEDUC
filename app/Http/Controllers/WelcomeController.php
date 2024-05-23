@@ -8,6 +8,7 @@ use App\Models\Catedratico;
 use App\Models\Departamento;
 use App\Models\Municipio;
 use App\Models\Escuela;
+use App\Models\Inscripcion;
 use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
@@ -19,7 +20,7 @@ class WelcomeController extends Controller
         $totalCatedraticos = Catedratico::count();
         $datosGrafico = $this->getDatosGrafico(); // Obtenemos los datos para el gráfico
         $datosGrafico1= $this->getDatosGrafico1();
-        
+
 
 
         return view('welcome', compact('totalAlumnos','totalCatedraticos', 'datosGrafico','datosGrafico1'));
@@ -30,7 +31,7 @@ class WelcomeController extends Controller
 
     private function getDatosGrafico()
     {
-        $alumnosPorMunicipio = Alumno::select('id_municipio', DB::raw('COUNT(*) as total'))
+        $alumnosPorMunicipio = Inscripcion::select('id_municipio', DB::raw('COUNT(*) as total'))
             ->groupBy('id_municipio')
             ->get();
 
@@ -50,25 +51,28 @@ class WelcomeController extends Controller
     }
 
     private function getDatosGrafico1()
-    {
+{
+    // Obtener los departamentos con la cantidad de alumnos por departamento
+    $alumnosPorDepartamento = Inscripcion::join('municipios', 'inscripciones.id_municipio', '=', 'municipios.id')
+        ->join('departamentos', 'municipios.id_departamento', '=', 'departamentos.id')
+        ->select('departamentos.departamento as nombre_departamento', 'departamentos.id as id_departamento', DB::raw('COUNT(inscripciones.id) as total'))
+        ->groupBy('departamentos.id', 'departamentos.departamento')
+        ->get();
 
-        $alumnosPorDepartamento = Alumno::select('id_departamento', DB::raw('COUNT(*) as total'))
-            ->groupBy('id_departamento')
-            ->get();
+    $datos = [
+        'labels' => [],
+        'data' => []
+    ];
 
-        $departamentos = Departamento::pluck('departamento', 'id')->all();
-
-        $datos = [
-            'labels' => [],
-            'data' => []
-        ];
-
-        foreach ($alumnosPorDepartamento as $alumno) {
-            $datos['labels'][] = $departamentos[$alumno->id_departamento];
-            $datos['data'][] = $alumno->total;
-        }
-
-        return $datos;
+    foreach ($alumnosPorDepartamento as $alumno) {
+        $datos['labels'][] = $alumno->nombre_departamento;
+        $datos['data'][] = $alumno->total;
     }
+
+    return $datos;
+}
+
+
+
 }
 

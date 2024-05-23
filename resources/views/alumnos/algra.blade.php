@@ -27,8 +27,8 @@
         <tbody>
             @foreach ($escuelas as $escuela)
                 <tr>
-                    <td>{{ $escuela->alumnos->first()->escuela->Escuela }}</td>
-                    <td style="text-align: center;">{{ $escuela->alumnos->count() }}</td>
+                    <td>{{ $escuela->inscripciones->first()->escuela->Escuela }}</td>
+                    <td style="text-align: center;">{{ $escuela->inscripciones->count() }}</td>
                     <td style="text-align: center;">{{ $escuela->alumnos_por_grado[1] ?? 0 }}</td>
                     <td style="text-align: center;">{{ $escuela->alumnos_por_grado[2] ?? 0 }}</td>
                     <td style="text-align: center;">{{ $escuela->alumnos_por_grado[3] ?? 0 }}</td>

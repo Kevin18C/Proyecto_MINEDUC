@@ -256,13 +256,10 @@
                 <tr>
                     <th>ID</th>
                     <th>Nombre</th>
-                    <th>Catedrático</th>
-                    <th>Curso</th>
-                    <th>Sección</th>
-                    <th>Grado</th>
-                    <th>Escuela</th>
-                    <th>Municipio</th>
-                    <th>Departamento</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Telefono</th>
+                    <th>Genero</th>
+
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -271,13 +268,9 @@
                 <tr>
                     <td>{{ $alumno->id }}</td>
                     <td>{{ $alumno->nombre_alumno }}</td>
-                    <td>{{ $alumno->catedratico ? $alumno->catedratico->nombre_catedratico : '' }}</td>
-                    <td>{{ $alumno->curso ? $alumno->curso->Curso : '' }}</td>
-                    <td>{{ $alumno->seccion ? $alumno->seccion->Seccion : '' }}</td>
-                    <td>{{ $alumno->grado ? $alumno->grado->Grado : '' }}</td>
-                    <td>{{ $alumno->escuela ? $alumno->escuela->Escuela : '' }}</td>
-                    <td>{{ $alumno->municipio ? $alumno->municipio->municipio : '' }}</td>
-                    <td>{{ $alumno->departamento ? $alumno->departamento->departamento : '' }}</td>
+                    <td>{{ $alumno->fecha_de_nacimiento }}</td>
+                    <td>{{ $alumno->telefono }}</td>
+                    <td>{{ $alumno->genero}}</td>
                     <td>
 
                         <a href="{{ route('alumnos.create') }}" style="display: inline;"><button>Agregar</button></a>

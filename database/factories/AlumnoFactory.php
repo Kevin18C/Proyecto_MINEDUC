@@ -15,14 +15,7 @@ class AlumnoFactory extends Factory
     public function definition()
     {
         return [
-            'nombre_alumno'=>$this->faker->name,
-            'id_catedratico'=>$this->faker->randomElement(range(1,20)),
-            'id_curso' => $this->faker->randomElement(range(1,9)),
-            'id_seccion'=>$this->faker->randomElement(range(1,2)),
-            'id_grado'=>$this->faker->randomElement(range(1,9)),
-            'id_escuela'=>$this->faker->randomElement(range(1,333)),
-            'id_departamento'=>$this->faker->randomElement(range(1, 22)),
-            'id_municipio'=>$this->faker->randomElement(range(1,333)),
+            
         ];
     }
 }
