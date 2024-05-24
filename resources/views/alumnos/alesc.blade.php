@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,34 +13,40 @@
 
     <title>Total alumnos por escuela</title>
 </head>
+
 <body>
 
-<div class="container">
-    <table class="table">
-        <thead class="thead-dark">
-            <tr>
-                <th>Escuela</th>
-                <th>Número de Alumnos</th>
-                <th>Alumnos</th>
-            </tr>
-        </thead>
-        <tbody >
-            @foreach ($escuelas as $escuela)
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
                 <tr>
-                    <td>{{ $escuela->Escuela }}</td>
-                    <td>{{ $escuela->alumnos_count }}</td>
-                    <td>
-                        <ul>
-                            @foreach ($escuela->alumnos as $alumno)
-                                <li>{{ $alumno->nombre_alumno }} - {{ $alumno->grado }}</li>
-                            @endforeach
-                        </ul>
-                    </td>
+                    <th>Escuela</th>
+                    <th>Número de Alumnos</th>
+                    <th>Alumnos</th>
+                    
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($escuelas as $escuela)
+                    <tr>
+                        <td>{{ $escuela->Escuela }}</td>
+                        <td>{{ $escuela->inscripciones_count }}</td>
+                        <td>
+                            <ul>
+                                @foreach ($escuela->inscripciones as $alumno)
+                                    <li>{{ $alumno->nombre_alumno }} - {{ $alumno->grado->Grado }}</li>
+                                @endforeach
 
-</div>
+
+                            </ul>
+                        </td>
+
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+
+    </div>
 </body>
+
 </html>

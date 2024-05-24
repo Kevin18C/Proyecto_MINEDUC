@@ -9,8 +9,10 @@ class alescController extends Controller
 {
     public function index()
     {
-
-        $escuelas = Escuela::withCount('alumnos')->with('alumnos')->get();
+        $escuelas = Escuela::withCount('inscripciones')
+                           ->with('inscripciones')
+                           ->has('inscripciones')
+                           ->get();
 
         return view('alumnos.alesc', compact('escuelas'));
     }

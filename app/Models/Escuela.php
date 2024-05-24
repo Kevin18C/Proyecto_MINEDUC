@@ -13,4 +13,8 @@ class Escuela extends Model
     {
         return $this->hasMany(Alumno::class,'id_escuela');
     }
+    public function inscripciones()
+    {
+        return $this->hasMany(Inscripcion::class,'id_escuela');
+    }
 }

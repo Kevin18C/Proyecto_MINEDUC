@@ -2,11 +2,13 @@
 
 namespace Database\Seeders;
 
+
 use Illuminate\Database\Seeder;
 use App\Models\Alumno;
 use App\Models\Catedratico;
 use App\Models\Tutelar;
 use App\Models\Escuela;
+use App\Models\Inscripcion;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,7 +35,12 @@ $cantidadEscuelas = 333; // Puedes ajustar este valor según tus necesidades
 Escuela::factory()->count($cantidadEscuelas)->create();
 
         Catedratico::factory(20)->create();
-        Alumno::factory(100)->create();
+
+
+
+        Inscripcion::factory(100)->create();
+               
+
 
         Tutelar::factory()->count(100)->create();
 

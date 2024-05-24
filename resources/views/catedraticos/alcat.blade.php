@@ -19,7 +19,7 @@
             @foreach ($catedraticos as $catedratico)
                 <tr>
                     <td>{{ $catedratico->nombre_catedratico }}</td>
-                    <td style="text-align: center;">{{ $catedratico->alumnos_count }}</td>
+                    <td style="text-align: center;">{{ $catedratico->inscripciones_count }}</td>
                 </tr>
             @endforeach
         </tbody>

@@ -61,6 +61,34 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="fecha_de_nacimiento">Fecha de Nacimiento:</label>
+                        <input type="date" class="form-control @error('fecha_de_nacimiento') is-invalid @enderror" id="fecha_de_nacimiento" name="fecha_de_nacimiento" value="{{ old('fecha_de_nacimiento') }}">
+                        @error('fecha_de_nacimiento')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Número de Teléfono:</label>
+                        <input type="tel" class="form-control @error('telefono') is-invalid @enderror" id="telefono" name="telefono" pattern="[0-9]{8}" maxlength="8" value="{{ old('telefono') }}">
+                        @error('telefono')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <select class="form-control @error('genero') is-invalid @enderror" name="genero" id="genero">
+                            <option value="">Seleccione el género</option>
+                            <option value="masculino" {{ old('genero') == 'masculino' ? 'selected' : '' }}>Masculino</option>
+                            <option value="femenino" {{ old('genero') == 'femenino' ? 'selected' : '' }}>Femenino</option>
+                        </select>
+                        @error('genero')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
                         <label for="id_catedratico">Catedrático:</label>
                         <select class="form-control @error('id_catedratico') is-invalid @enderror" name="id_catedratico" id="id_catedratico">
                             <option value="">Seleccione un catedrático</option>
@@ -125,18 +153,7 @@
                         @enderror
                     </div>
 
-                    <div class="form-group">
-                        <label for="id_departamento">Departamento:</label>
-                        <select class="form-control @error('id_departamento') is-invalid @enderror" name="id_departamento" id="id_departamento">
-                            <option value="">Seleccione un departamento</option>
-                            @foreach($departamentos as $departamento)
-                                <option value="{{ $departamento->id }}">{{ $departamento->departamento }}</option>
-                            @endforeach
-                        </select>
-                        @error('id_departamento')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
-                    </div>
+
 
                     <div class="form-group">
                         <label for="id_municipio">Municipio:</label>

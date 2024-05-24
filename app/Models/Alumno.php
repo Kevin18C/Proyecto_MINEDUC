@@ -9,10 +9,12 @@ class Alumno extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
-        'id',
+    protected $fillable = [
         'nombre_alumno',
-        'grado_id',
+        'fecha_de_nacimiento',
+        'telefono',
+        'genero',
+        
     ];
 
     public function tutelar()
@@ -50,4 +52,9 @@ class Alumno extends Model
     {
         return $this->belongsTo(Curso::class, 'id_curso');
     }
+
+    public function inscripciones()
+{
+    return $this->hasMany(Inscripcion::class);
+}
 }

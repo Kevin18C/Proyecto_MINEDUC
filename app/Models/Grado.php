@@ -22,6 +22,8 @@ class Grado extends Model
     {
         return $this->hasMany(Catedratico::class,'id_grado');
     }
-
-
+    public function inscripciones()
+    {
+        return $this->hasMany(Inscripcion::class,'id_grado');
+    }
 }
