@@ -10,6 +10,8 @@ use App\Http\Controllers\alescController;
 use App\Http\Controllers\AlgraController;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\horarioController;
+use App\Http\Controllers\examenesController;
+
 
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
@@ -38,6 +40,9 @@ Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedr
 //Ruta para mostrar el horario
 //Route::get('/horarios', [horarioController::class, 'index'])->name('horarios.index');
 Route::get('/horario', [horarioController::class, 'index'])->name('horarios.index');
+
+//Ruta para mostrar el calendario de examenes
+Route::get('/examenes', [examenesController::class, 'index'])->name('examenes.index');
 
 
 

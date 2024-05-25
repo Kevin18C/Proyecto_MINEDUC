@@ -300,6 +300,14 @@
                                 Horarios<!-- Agregué un nuevo ícono a la vista principal-->
                             </a>
                         </li>
+                        <li>
+                            <a href="{{ route('examenes.index') }}" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Examenes
+                            </a>
+                        </li>
 
 
 
