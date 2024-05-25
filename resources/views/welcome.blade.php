@@ -235,7 +235,7 @@
 
     {{-- Codigo Header --}}
 
-    <header>
+    {{--<header>
         <div class="px-3 py-2 text-bg-dark border-bottom">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -305,7 +305,7 @@
                                 <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#table" />
                                 </svg>
-                                Examenes
+                                Examenes<!-- Agregué un nuevo ícono a la vista principal-->
                             </a>
                         </li>
 
@@ -325,7 +325,7 @@
 
             </div>
         </div>
-    </header>
+    </header>--}}
 
     {{-- Contenedor del sidebar y del contenido principal --}}
     <div class="container-fluid">
@@ -391,6 +391,14 @@
                                     <use xlink:href="#grid" />
                                 </svg>
                                 Horarios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('examenes.index') }}" class="nav-link link-body-emphasis">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Examenes
                             </a>
                         </li>
 

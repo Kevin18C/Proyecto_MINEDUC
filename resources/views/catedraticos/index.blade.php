@@ -179,11 +179,11 @@
 
                     <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
                         <li>
-                            <a href="{{ route('welcome') }}" class="nav-link text-secondary">
+                            <a href="{{ route('welcome') }}" class="nav-link text-white">
                                 <svg class="bi d-block mx-auto mb-1" width="24" height="24">
                                     <use xlink:href="#home" />
                                 </svg>
-                                Home
+                                Inicio
                             </a>
                         </li>
                         <li>
@@ -232,6 +232,14 @@
                                 </svg>
                                 Horarios <!-- Agregué un nuevo ícono a la vista catedráticos-->
                                 <!-- Ahora ya se puede ver el calendario desde la vista catedráticos-->
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('examenes.index') }}" class="nav-link text-white">
+                                <svg class="bi d-block mx-auto mb-1" width="24" height="24">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Examenes<!-- Agregué un nuevo ícono a la vista principal-->
                             </a>
                         </li>
 
