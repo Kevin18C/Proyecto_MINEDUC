@@ -305,7 +305,7 @@
                                 <svg class="bi d-block mx-auto mb-1" width="30" height="35">
                                     <use xlink:href="#table" />
                                 </svg>
-                                Examenes
+                                Examenes<!-- Agregué un nuevo ícono a la vista principal-->
                             </a>
                         </li>
 
@@ -391,6 +391,14 @@
                                     <use xlink:href="#grid" />
                                 </svg>
                                 Horarios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('examenes.index') }}" class="nav-link link-body-emphasis">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Examenes
                             </a>
                         </li>
 
