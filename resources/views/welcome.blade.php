@@ -235,7 +235,7 @@
 
     {{-- Codigo Header --}}
 
-    <header>
+    {{--<header>
         <div class="px-3 py-2 text-bg-dark border-bottom">
             <div class="container">
                 <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -325,7 +325,7 @@
 
             </div>
         </div>
-    </header>
+    </header>--}}
 
     {{-- Contenedor del sidebar y del contenido principal --}}
     <div class="container-fluid">
