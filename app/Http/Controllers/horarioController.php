@@ -30,6 +30,7 @@ class horarioController extends Controller
                 'Jueves' => 'Arte',
                 'Viernes' => 'Música',
             ],
+
             // Pueden añadirse más horas y cursos según sea necesario
         ];
 
