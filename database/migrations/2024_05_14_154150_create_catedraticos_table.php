@@ -16,7 +16,6 @@ class CreateCatedraticosTable extends Migration
         Schema::create('catedraticos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre_catedratico');
-           
             $table->unsignedBigInteger('id_curso');
             $table->unsignedBigInteger('id_grado');
             $table->unsignedBigInteger('id_seccion');

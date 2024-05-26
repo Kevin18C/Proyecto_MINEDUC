@@ -31,4 +31,21 @@ class EscuelaFactory extends Factory
             // Otros atributos de la escuela
         ];
     }
+
+    /**
+     * Indicate that the number of schools should be created per municipality.
+     *
+     * @param  int  $count
+     * @return \Illuminate\Database\Eloquent\Factories\Factory
+     */
+    public function perMunicipality($count = 5)
+    {
+        return $this->state(function (array $attributes) use ($count) {
+            return [
+                'id_municipio' => function () {
+                    return Municipio::factory()->create()->id;
+                },
+            ];
+        });
+    }
 }

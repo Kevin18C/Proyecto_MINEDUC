@@ -25,4 +25,8 @@ class Escuela extends Model
     {
         return $this->belongsTo(Municipio::class, 'id_municipio');
     }
+    public function catedraticos()
+    {
+        return $this->belongsToMany(Catedratico::class, 'catedratico_escuela', 'id_escuela', 'id_catedratico');
+    }
 }

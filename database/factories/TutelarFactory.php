@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TutelarFactory extends Factory
 {
+    protected $model = Tutelar::class;
+
     /**
      * Define the model's default state.
      *
@@ -16,8 +18,7 @@ class TutelarFactory extends Factory
     {
         return [
             'nombre_tutelar' => $this->faker->name,
-            'id_alumno' => $this->faker->randomElement(range(1,100)),
-
+            'id_alumno' => null, // Esto se llenará en InscripcionFactory
         ];
     }
 }
