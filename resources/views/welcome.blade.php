@@ -346,6 +346,14 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{ route('reportes.index') }}" class="nav-link link-body-emphasis">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#table" />
+                                </svg>
+                                Reportes
+                            </a>
+                        </li>
+                        <li>
                             <a href="{{ route('alumnos.index') }}" class="nav-link link-body-emphasis">
                                 <svg class="bi pe-none me-2" width="16" height="16">
                                     <use xlink:href="#table" />

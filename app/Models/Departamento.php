@@ -23,4 +23,8 @@ class Departamento extends Model
     {
         return $this->hasMany(Alumno::class,'id_departamento');
     }
+    public function inscripciones()
+    {
+        return $this->hasMany(Inscripcion::class, 'id_departamento');
+    }
 }

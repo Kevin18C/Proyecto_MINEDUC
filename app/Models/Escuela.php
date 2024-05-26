@@ -17,4 +17,12 @@ class Escuela extends Model
     {
         return $this->hasMany(Inscripcion::class,'id_escuela');
     }
+    public function grados()
+    {
+        return $this->hasMany(Grado::class, 'id_escuela');
+    }
+    public function municipio()
+    {
+        return $this->belongsTo(Municipio::class, 'id_municipio');
+    }
 }

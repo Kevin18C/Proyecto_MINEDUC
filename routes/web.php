@@ -58,3 +58,9 @@ Route::post('/catedraticos',[CatedraticoController::class, 'store'])->name('cate
 Route::delete('/catedraticos/{id}',[CatedraticoController::class,'destroy'])->name('catedraticos.destroy');
 
 Route::get('/reportes', [ReportesController::class, 'index'])->name('reportes.index');
+
+
+Route::get('/reportes/alumnos', [ReportesController::class, 'reporteAlumnos'])->name('reportes.alumnos');
+Route::get('/reportes/escuelas', [ReportesController::class, 'reporteEscuelas'])->name('reportes.escuelas');
+Route::get('/reportes/catedraticos', [ReportesController::class, 'reporteCatedraticos'])->name('reportes.catedraticos');
+Route::get('/municipios/{departamento}', [ReportesController::class, 'getMunicipios']);
