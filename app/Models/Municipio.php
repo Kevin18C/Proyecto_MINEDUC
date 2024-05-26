@@ -22,6 +22,9 @@ class Municipio extends Model
     {
         return $this->hasMany(Alumno::class,'id_municipio');
     }
-
+    public function inscripciones()
+    {
+        return $this->hasMany(Inscripcion::class,'id_municipio');
+    }
 
 }

@@ -27,6 +27,10 @@ class Inscripcion extends Model
         {
             return $this->belongsTo(Escuela::class,'id_escuela');
         }
+        public function municipio()
+    {
+        return $this->belongsTo(Municipio::class,'id_municipio');
+    }
 
 protected $dispatchesEvents = [
     'created' => InscripcionCreated::class,

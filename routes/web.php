@@ -11,8 +11,7 @@ use App\Http\Controllers\AlgraController;
 use App\Http\Controllers\CreateController;
 use App\Http\Controllers\horarioController;
 use App\Http\Controllers\examenesController;
-
-
+use App\Http\Controllers\ReportesController;
 
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 
@@ -57,3 +56,5 @@ Route::delete('/tutores/{id}', [TutelarController::class, 'destroy'])->name('tut
 Route::get('/catedraticos/create',[CatedraticoController::class, 'create'])->name('catedraticos.create');
 Route::post('/catedraticos',[CatedraticoController::class, 'store'])->name('catedraticos.store');
 Route::delete('/catedraticos/{id}',[CatedraticoController::class,'destroy'])->name('catedraticos.destroy');
+
+Route::get('/reportes', [ReportesController::class, 'index'])->name('reportes.index');
