@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Curso;
 use App\Models\Escuela;
 use App\Models\Inscripcion;
 use App\Models\Tutelar;
@@ -27,7 +28,7 @@ class InscripcionFactory extends Factory
             'telefono' => $this->faker->numerify('########'),
             'genero' => $this->faker->randomElement(['Masculino', 'Femenino']),
             'id_catedratico' => $this->faker->randomElement(range(1, 20)),
-            'id_curso' => $this->faker->randomElement(range(1, 9)),
+
             'id_seccion' => $this->faker->randomElement(range(1, 2)),
             'id_grado' => $this->faker->randomElement(range(1, 9)),
             'id_escuela' => $escuela->id,
@@ -35,10 +36,14 @@ class InscripcionFactory extends Factory
         ];
     }
 
-    public function configure()
-    {
-        return $this->afterCreating(function ($inscripcion) {
-            Tutelar::factory()->create(['id_alumno' => $inscripcion->id]);
-        });
-    }
+            public function configure()
+        {
+            return $this->afterCreating(function ($inscripcion) {
+                $cursos = Curso::all();
+                $cursos->each(function ($curso) use ($inscripcion) {
+                    $inscripcion->cursos()->attach($curso->id);
+                });
+                Tutelar::factory()->create(['id_alumno' => $inscripcion->id]);
+            });
+        }
 }

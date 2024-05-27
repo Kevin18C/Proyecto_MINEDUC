@@ -20,7 +20,7 @@ class CreateInscripcionesTable extends Migration
             $table->string('telefono');
             $table->string('genero');
             $table->unsignedBigInteger('id_catedratico');
-            $table->unsignedBigInteger('id_curso');
+            $table->unsignedBigInteger('id_curso')->nullable();
             $table->unsignedBigInteger('id_seccion');
             $table->unsignedBigInteger('id_grado');
             $table->unsignedBigInteger('id_escuela');
