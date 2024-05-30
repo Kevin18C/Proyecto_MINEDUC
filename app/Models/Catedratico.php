@@ -9,7 +9,7 @@ class Catedratico extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nombre_catedratico', 'id_curso', 'id_grado', 'id_seccion'];
+    protected $fillable = ['nombre_catedratico', 'id_curso', 'id_grado', 'id_seccion', 'id_escuela'];
 
     // Relación con la tabla Secciones
     public function seccion()
@@ -21,23 +21,29 @@ class Catedratico extends Model
     {
         return $this->hasMany(Alumno::class, 'id_catedratico', 'id');
     }
+
     public function grado()
     {
-        return $this->belongsTo(Grado::class,'id_grado');
-    }
-    public function curso()
-    {
-        return $this->belongsTo(Curso::class,'id_curso');
+        return $this->belongsTo(Grado::class, 'id_grado');
     }
 
-    public function escuelas()
+    public function curso()
     {
-        return $this->belongsToMany(Escuela::class, 'catedratico_escuela', 'id_catedratico', 'id_escuela');
+        return $this->belongsTo(Curso::class, 'id_curso');
+    }
+
+    public function escuela()
+    {
+        return $this->belongsTo(Escuela::class, 'id_escuela');
     }
 
     public function inscripciones()
     {
-        return $this->hasMany(Inscripcion::class, 'id_catedratico','id');
+        return $this->hasMany(Inscripcion::class, 'id_catedratico', 'id');
     }
 
+    public function cursos()
+    {
+        return $this->belongsToMany(Curso::class, 'curso_catedratico', 'id_catedratico', 'id_curso');
+    }
 }

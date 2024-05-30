@@ -43,3 +43,20 @@
         @endforeach
     </tbody>
 </table>
+
+<script>
+    document.getElementById('id_departamento').addEventListener('change', function() {
+        var departamentoId = this.value;
+        fetch('/get-municipios/' + departamentoId)
+            .then(response => response.json())
+            .then(data => {
+                var municipioSelect = document.getElementById('id_municipio');
+                municipioSelect.innerHTML = '<option value="">--Seleccionar Municipio--</option>';
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        municipioSelect.innerHTML += '<option value="' + key + '">' + data[key] + '</option>';
+                    }
+                }
+            });
+    });
+    </script>

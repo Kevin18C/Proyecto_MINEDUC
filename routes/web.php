@@ -64,3 +64,7 @@ Route::get('/reportes/alumnos', [ReportesController::class, 'reporteAlumnos'])->
 Route::get('/reportes/escuelas', [ReportesController::class, 'reporteEscuelas'])->name('reportes.escuelas');
 Route::get('/reportes/catedraticos', [ReportesController::class, 'reporteCatedraticos'])->name('reportes.catedraticos');
 Route::get('/municipios/{departamento}', [ReportesController::class, 'getMunicipios']);
+
+Route::get('/municipios/{departamento}', [ReportesController::class, 'getMunicipios']);
+Route::get('/escuelas/{municipio}', [ReportesController::class, 'getEscuelas']);
+Route::get('/escuelas/departamento/{departamento}', [ReportesController::class, 'getEscuelasPorDepartamento']);

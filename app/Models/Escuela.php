@@ -11,22 +11,26 @@ class Escuela extends Model
 
     public function alumnos()
     {
-        return $this->hasMany(Alumno::class,'id_escuela');
+        return $this->hasMany(Alumno::class, 'id_escuela');
     }
+
     public function inscripciones()
     {
-        return $this->hasMany(Inscripcion::class,'id_escuela');
+        return $this->hasMany(Inscripcion::class, 'id_escuela');
     }
+
     public function grados()
     {
         return $this->hasMany(Grado::class, 'id_escuela');
     }
+
     public function municipio()
     {
         return $this->belongsTo(Municipio::class, 'id_municipio');
     }
+
     public function catedraticos()
     {
-        return $this->belongsToMany(Catedratico::class, 'catedratico_escuela', 'id_escuela', 'id_catedratico');
+        return $this->hasMany(Catedratico::class, 'id_escuela');
     }
 }

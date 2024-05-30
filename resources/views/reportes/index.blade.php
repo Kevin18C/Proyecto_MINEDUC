@@ -4,18 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Reportes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <div id="sidebar">
-        <ul>
-            <li><a href="#" data-url="{{ route('reportes.alumnos') }}">Reporte de Alumnos</a></li>
-            <li><a href="#" data-url="{{ route('reportes.escuelas') }}">Reporte de Escuelas</a></li>
-            <li><a href="#" data-url="{{ route('reportes.catedraticos') }}">Reporte de Catedráticos</a></li>
-        </ul>
-    </div>
-    <div id="content">
-        <!-- El contenido de los reportes se cargará aquí -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Dashboard de Reportes</h1>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-url="{{ route('reportes.alumnos') }}">Reporte de Alumnos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-url="{{ route('reportes.escuelas') }}">Reporte de Escuelas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-url="{{ route('reportes.catedraticos') }}">Reporte de Catedráticos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                <div id="content" class="pt-3">
+                    <!-- El contenido de los reportes se cargará aquí -->
+                </div>
+            </main>
+        </div>
     </div>
 
     <script>
