@@ -11,7 +11,7 @@ class Curso extends Model
 
     protected $fillable = [
         'id_curso',
-        'nombre_curso'
+        'Curso'
     ];
 
     public function catedraticos()
@@ -22,4 +22,12 @@ class Curso extends Model
 {
     return $this->hasMany(Inscripcion::class , 'id_curso','curso_inscripcion','id_catedratico');
 }
+public function actividades()
+    {
+        return $this->hasMany(Actividad::class, 'id_curso');
+    }
+    public function horarios()
+    {
+        return $this->hasMany(HorarioDeClase::class,'id_curso');
+    }
 }

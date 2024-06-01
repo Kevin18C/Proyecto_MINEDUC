@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActividadController;
 use App\Http\Controllers\AlcatController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WelcomeController;
@@ -8,7 +9,9 @@ use App\Http\Controllers\CatedraticoController;
 use App\Http\Controllers\TutelarController;
 use App\Http\Controllers\alescController;
 use App\Http\Controllers\AlgraController;
+use App\Http\Controllers\CalendarioDeExamenController;
 use App\Http\Controllers\CreateController;
+use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\horarioController;
 use App\Http\Controllers\examenesController;
 use App\Http\Controllers\ReportesController;
@@ -41,7 +44,7 @@ Route::get('/catedraticos.alcat',[AlcatController::class,'index'])->name('catedr
 Route::get('/horario', [horarioController::class, 'index'])->name('horarios.index');
 
 //Ruta para mostrar el calendario de examenes
-Route::get('/examenes', [examenesController::class, 'index'])->name('examenes.index');
+Route::get('/examenes', [ExamenController::class, 'mostrarExamenes'])->name('examenes.index');
 
 
 
@@ -62,9 +65,23 @@ Route::get('/reportes', [ReportesController::class, 'index'])->name('reportes.in
 
 Route::get('/reportes/alumnos', [ReportesController::class, 'reporteAlumnos'])->name('reportes.alumnos');
 Route::get('/reportes/escuelas', [ReportesController::class, 'reporteEscuelas'])->name('reportes.escuelas');
-Route::get('/reportes/catedraticos', [ReportesController::class, 'reporteCatedraticos'])->name('reportes.catedraticos');
+
 Route::get('/municipios/{departamento}', [ReportesController::class, 'getMunicipios']);
 
 Route::get('/municipios/{departamento}', [ReportesController::class, 'getMunicipios']);
 Route::get('/escuelas/{municipio}', [ReportesController::class, 'getEscuelas']);
 Route::get('/escuelas/departamento/{departamento}', [ReportesController::class, 'getEscuelasPorDepartamento']);
+
+Route::get('/reportes/catedraticos', [ReportesController::class, 'reporteCatedraticos'])->name('reportes.catedraticos');
+Route::get('/reportes/getMunicipios/{departamento_id}', [ReportesController::class, 'getMunicipios'])->name('reportes.getMunicipios');
+Route::get('/reportes/getEscuelas/{municipio_id}', [ReportesController::class, 'getEscuelas'])->name('reportes.getEscuelas');
+Route::get('/reportes/getEscuelasPorDepartamento/{departamento_id}', [ReportesController::class, 'getEscuelasPorDepartamento'])->name('reportes.getEscuelasPorDepartamento');
+
+
+Route::get('/Actividades/index', [ActividadController::class, 'mostrarCalendario'])->name('Actividades.index');
+
+
+Route::get('/actividades/create', [ActividadController::class, 'create'])->name('actividades.create');
+Route::post('/actividades', [ActividadController::class, 'store'])->name('actividades.store');
+
+

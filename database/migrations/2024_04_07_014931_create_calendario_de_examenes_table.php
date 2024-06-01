@@ -15,6 +15,8 @@ class CreateCalendarioDeExamenesTable extends Migration
     {
         Schema::create('calendario_de_examenes', function (Blueprint $table) {
             $table->id();
+            $table->string('Curso');
+            $table->dateTime('FechaYHoradelExamen');
             $table->timestamps();
         });
     }

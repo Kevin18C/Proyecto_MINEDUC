@@ -231,101 +231,9 @@
     </svg>
 
 
-
-
-    {{-- Codigo Header --}}
-
-    {{--<header>
-        <div class="px-3 py-2 text-bg-dark border-bottom">
-            <div class="container">
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                    <a href="/"
-                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-
-                    </a>
-
-                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-                        <li>
-                            <a href="{{ route('welcome') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#home" />
-                                </svg>
-                                Inicio
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('alumnos.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#table" />
-                                </svg>
-                                Alumnos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('alumnos.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#table" />
-                                </svg>
-                                Catedraticos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#grid" />
-                                </svg>
-                                Grados
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#people-circle" />
-                                </svg>
-                                Cursos
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('tutores.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#people-circle" />
-                                </svg>
-                                Tutores
-                            </a>
-                        <li>
-                            <a href="{{ route('horarios.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#grid" />
-                                </svg>
-                                Horarios<!-- Agregué un nuevo ícono a la vista principal-->
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('examenes.index') }}" class="nav-link text-white">
-                                <svg class="bi d-block mx-auto mb-1" width="30" height="35">
-                                    <use xlink:href="#table" />
-                                </svg>
-                                Examenes<!-- Agregué un nuevo ícono a la vista principal-->
-                            </a>
-                        </li>
-
-
-
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="px-3 py-2 border-bottom mb-3">
-            <div class="container d-flex flex-wrap justify-content-center">
-                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
-                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                </form>
-
-
-            </div>
-        </div>
-    </header>--}}
+<header>
+    Proyecto Mineduc
+</header>
 
     {{-- Contenedor del sidebar y del contenido principal --}}
     <div class="container-fluid">
@@ -378,6 +286,22 @@
                             </a>
                         </li>
                         <li>
+                            <a href="{{ route('Actividades.index') }}" class="nav-link link-body-emphasis">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#grid" />
+                                </svg>
+                               Actividades
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('examenes.index') }}" class="nav-link link-body-emphasis">
+                                <svg class="bi pe-none me-2" width="16" height="16">
+                                    <use xlink:href="#grid" />
+                                </svg>
+                                Examenes
+                            </a>
+                        </li>
+                        <li>
                             <a href="#" class="nav-link link-body-emphasis">
                                 <svg class="bi pe-none me-2" width="16" height="16">
                                     <use xlink:href="#people-circle" />
@@ -401,272 +325,95 @@
                                 Horarios
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('examenes.index') }}" class="nav-link link-body-emphasis">
-                                <svg class="bi pe-none me-2" width="16" height="16">
-                                    <use xlink:href="#table" />
-                                </svg>
-                                Examenes
-                            </a>
-                        </li>
-
-
 
                     </ul>
                     <hr>
-                    <div class="dropdown">
-                        <a href="#"
-                            class="d-flex align-items-center link-body-emphasis text-decoration-none dropdown-toggle"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="https://github.com/mdo.png" alt="" width="32" height="32"
-                                class="rounded-circle me-2">
-                            <strong>mdo</strong>
-                        </a>
-                        <ul class="dropdown-menu text-small shadow">
-                            <li><a class="dropdown-item" href="#">New project...</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sign out</a></li>
-                        </ul>
-                    </div>
+
                 </div>
 
             </div>
 
             <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
 
                     {{-- Codigo Principal --}}
-                        <div class="row">
+                    <div class="row">
 
 
-                            <!-- Incluye la biblioteca Chart.js -->
-                                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-                                <div class="col-md-11">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Cantidad de alumnos por municipio</h5>
 
-                                                        <!-- Gráfico de alumnos por municipio -->
-                                                    <div class="chart-container">
-                                                        <canvas id="graficoAlumnosPorMunicipio"></canvas>
-                                                    </div>
-                                                </div>
 
-                                                <script>
-                                                    // JavaScript para generar el gráfico utilizando los datos en $datosGrafico
-                                                    var datosGrafico = {!! json_encode($datosGrafico) !!};
 
-                                                    var ctx = document.getElementById('graficoAlumnosPorMunicipio').getContext('2d');
-                                                    var myChart = new Chart(ctx, {
-                                                        type: 'doughnut', // Gráfico de pastel
-                                                        data: {
-                                                            labels: datosGrafico.labels,
-                                                            datasets: [{
-                                                                data: datosGrafico.data,
-                                                                backgroundColor: [
-                                                                    'rgba(255, 99, 132, 0.2)',
-                                                                    'rgba(54, 162, 235, 0.2)',
-                                                                    'rgba(255, 206, 86, 0.2)',
-                                                                    'rgba(75, 192, 192, 0.2)',
-                                                                    'rgba(153, 102, 255, 0.2)',
-                                                                    'rgba(255, 159, 64, 0.2)'
-                                                                    // Puedes agregar más colores si tienes más datos
-                                                                ],
-                                                                borderColor: [
-                                                                    'rgba(255, 99, 132, 1)',
-                                                                    'rgba(54, 162, 235, 1)',
-                                                                    'rgba(255, 206, 86, 1)',
-                                                                    'rgba(75, 192, 192, 1)',
-                                                                    'rgba(153, 102, 255, 1)',
-                                                                    'rgba(255, 159, 64, 1)'
-                                                                    // Puedes agregar más colores si tienes más datos
-                                                                ],
-                                                                borderWidth: 1
-                                                            }]
-                                                        },
-                                                        options: {
-                                                            cutout: 0, // Sin espacio en medio
-                                                            plugins: {
-                                                                legend: false, // No mostrar leyenda
-                                                                tooltip: {
-                                                                    callbacks: {
-                                                                        label: function(context) {
-                                                                            return context.label + ': ' + context.formattedValue; // Mostrar el nombre y el valor
-                                                                        }
-                                                                    }
-                                                                }
-                                                            },
-                                                            responsive:true,
-                                                            maintainAspectRatio:false,
-                                                            aspectRatio:1
-                                                        }
-                                                    });
-                                                </script>
-                                        </div>
+
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                            <div class="col">
+                                <div class="card h-100 w-150">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title mb-0">Total de Alumnos</h5>
                                     </div>
-                                </div>
-
-                                <div class="col-sm-4">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Total de alumnos por departamento</h5>
-
-                                            <div class="chart-container">
-                                                <canvas id="graficoAlumnosPorDepartamento"></canvas>
-                                            </div>
-
-                                            <script>
-                                                // JavaScript para generar el gráfico utilizando los datos en $datosGrafico
-                                                var datosGrafico1 = {!! json_encode($datosGrafico1) !!};
-
-                                                var ctx = document.getElementById('graficoAlumnosPorDepartamento').getContext('2d');
-                                                var myChart = new Chart(ctx, {
-                                                    type: 'doughnut', // Gráfico de pastel
-                                                    data: {
-                                                        labels: datosGrafico1.labels,
-                                                        datasets: [{
-                                                            data: datosGrafico1.data,
-                                                            backgroundColor: [
-                                                                'rgba(255, 99, 132, 0.2)',
-                                                                'rgba(54, 162, 235, 0.2)',
-                                                                'rgba(255, 206, 86, 0.2)',
-                                                                'rgba(75, 192, 192, 0.2)',
-                                                                'rgba(153, 102, 255, 0.2)',
-                                                                'rgba(255, 159, 64, 0.2)'
-                                                                // Puedes agregar más colores si tienes más datos
-                                                            ],
-                                                            borderColor: [
-                                                                'rgba(255, 99, 132, 1)',
-                                                                'rgba(54, 162, 235, 1)',
-                                                                'rgba(255, 206, 86, 1)',
-                                                                'rgba(75, 192, 192, 1)',
-                                                                'rgba(153, 102, 255, 1)',
-                                                                'rgba(255, 159, 64, 1)'
-                                                                // Puedes agregar más colores si tienes más datos
-                                                            ],
-                                                            borderWidth: 1
-                                                        }]
-                                                    },
-                                                    options: {
-                                                        cutout: 0, // Sin espacio en medio
-                                                        plugins: {
-                                                            legend: false, // No mostrar leyenda
-                                                            tooltip: {
-                                                                callbacks: {
-                                                                    label: function(context) {
-                                                                        return context.label + ': ' + context.formattedValue; // Mostrar el nombre y el valor
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        responsive:true,
-                                                        maintainAspectRatio:false,
-                                                        aspectRatio:1
-                                                    }
-                                                });
-                                            </script>
-
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-body d-flex justify-content-between align-items-center">
-                                                <h5 class="card-title mb-0">Total de Alumnos</h5>
-                                                <!-- Icono de estudiante -->
-
-                                                <!-- Fin del icono de estudiante -->
-                                            </div>
-                                            <div class="card-body">
-                                                <p class="card-text">{{ $totalAlumnos }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="card">
-                                            <div class="card-body d-flex justify-contente-between align-item-center">
-                                                <h5 class="card-title mb-0">Total de Catedraticos</h5>
-
-                                            </div>
-
-                                            <div class="card-body">
-                                                <p class="card-text">{{ $totalCatedraticos }}</p>
-
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-4">
-                                    <div class="card">
-                                        <div class="card-body d-flex justify-contente-between align-item-center">
-                                            <h5 class="card-title mb-0">Total de alumnos por escuela y grado al que pertenecen</h5>
-
-                                        </div>
-
-                                        <div class="card-body">
-
-                                            <a class="card-text" href="{{route('alumnos.alesc') }}">ver</a>
-
-
+                                    <div class="card-body flex-grow-1 d-flex align-items-center">
+                                        <p class="card-text m-0">{{ $totalAlumnos }}</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="col-md-4">
-                                <div class="card">
-                                    <div class="card-body d-flex justify-contente-between align-item-center">
-                                        <h5 class="card-title mb-0">Total de alumnos por grado de cada escuela</h5>
-
+                            <div class="col">
+                                <div class="card h-100 w-150">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title mb-0">Total de Catedraticos</h5>
                                     </div>
+                                    <div class="card-body flex-grow-1 d-flex align-items-center">
+                                        <p class="card-text m-0">{{ $totalCatedraticos }}</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                                    <div class="card-body">
+                            <div class="col">
+                                <div class="card h-100 w-150">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title mb-0">Total de Tutelares</h5>
+                                    </div>
+                                    <div class="card-body flex-grow-1 d-flex align-items-center">
+                                        <p class="card-text m-0">{{ $totalTutelares }}</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <a class="card-text" href="{{route('alumnos.algra') }}">ver</a>
-
-
+                            <div class="col">
+                                <div class="card h-100 w-150">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <h5 class="card-title mb-0">Total de Escuelas</h5>
+                                    </div>
+                                    <div class="card-body flex-grow-1 d-flex align-items-center">
+                                        <p class="card-text m-0">{{ $totalEscuelas }}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
-                            <div class="card">
-                                <div class="card-body d-flex justify-contente-between align-item-center">
-                                    <h5 class="card-title mb-0">Total de alumnos por catedratico</h5>
-
-                                </div>
-
-                                <div class="card-body">
-
-                                    <a class="card-text" href="{{route('catedraticos.alcat') }}">ver</a>
 
 
-                            </div>
+
+
                         </div>
                     </div>
 
 
-
-
-
-
-
-
-                        </div>
                 </div>
 
 
-            </main>
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+    </main>
 
     </div>
 
@@ -676,20 +423,23 @@
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
 
-                <span class="mb-3 mb-md-0 text-body-secondary"> Proyecto MINEDUC UMG - 2024 / Todos los derechos reservados. </span>
+                <span class="mb-3 mb-md-0 text-body-secondary"> Proyecto MINEDUC UMG - 2024 / Todos los derechos
+                    reservados. </span>
             </div>
 
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a class="text-body-secondary" href="https://x.com/marianogalvez?lang=es"><svg class="bi" width="24"
-                            height="24">
+                <li class="ms-3"><a class="text-body-secondary" href="https://x.com/marianogalvez?lang=es"><svg
+                            class="bi" width="24" height="24">
                             <use xlink:href="#twitter" />
                         </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/marianogalvez/?hl=es"><svg class="bi" width="24"
+                <li class="ms-3"><a class="text-body-secondary"
+                        href="https://www.instagram.com/marianogalvez/?hl=es"><svg class="bi" width="24"
                             height="24">
                             <use xlink:href="#instagram" />
                         </svg></a></li>
-                <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/sistemasumgbarrios?mibextid=ZbWKwL"><svg class="bi" width="24"
-                            height="24">
+                <li class="ms-3"><a class="text-body-secondary"
+                        href="https://www.facebook.com/sistemasumgbarrios?mibextid=ZbWKwL"><svg class="bi"
+                            width="24" height="24">
                             <use xlink:href="#facebook" />
                         </svg></a></li>
             </ul>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario de Exámenes</title>
+  <title>Calendario de Actividades y Exámenes</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -19,7 +19,7 @@
     }
 
     .btn-volver,
-    .btn-agregar-examen {
+    .btn-agregar {
       margin: 0 10px; /* Espacio entre botones */
     }
 
@@ -28,14 +28,9 @@
       border-color: #007bff;
     }
 
-    .btn-agregar-examen {
+    .btn-agregar {
       background-color: #28a745; /* Verde */
       border-color: #28a745;
-    }
-
-    .container {
-      max-width: 800px; /* Ancho máximo del contenedor */
-      margin: 0 auto; /* Centrar el contenedor */
     }
   </style>
 </head>
@@ -45,9 +40,9 @@
       <div class="col-12 text-center">
         <div class="d-flex justify-content-center">
           <a href="{{ route('welcome') }}" class="btn btn-volver">Volver</a>
-          <a href="#" class="btn btn-agregar-examen">Agregar Examen</a>
+          <a href="{{route('actividades.create')}}" class="btn btn-agregar">Agregar Actividad</a>
         </div>
-        <h1>Calendario de Exámenes</h1>
+        <h1>Calendario de Actividades y Exámenes</h1>
       </div>
     </div>
 
@@ -55,14 +50,16 @@
       <thead>
         <tr>
           <th scope="col" class="text-center">Fecha y Hora</th>
+          <th scope="col" class="text-center">Descripción</th>
           <th scope="col" class="text-center">Curso</th>
         </tr>
       </thead>
       <tbody>
-        @foreach ($examenes as $examen)
+        @foreach ($eventos as $evento)
           <tr>
-            <td class="text-center">{{ $examen['fecha'] }} {{ $examen['hora'] }}</td>
-            <td class="text-center">{{ $examen['curso'] }}</td>
+            <td class="text-center">{{ $evento['fecha'] }} {{ $evento['hora'] }}</td>
+            <td>{{ $evento['title'] }}</td>
+            <td class="text-center">{{ $evento['curso'] }}</td>
           </tr>
         @endforeach
       </tbody>

@@ -9,6 +9,7 @@ use App\Models\Departamento;
 use App\Models\Municipio;
 use App\Models\Escuela;
 use App\Models\Inscripcion;
+use App\Models\Tutelar;
 use Illuminate\Support\Facades\DB;
 
 class WelcomeController extends Controller
@@ -18,12 +19,14 @@ class WelcomeController extends Controller
     {
         $totalAlumnos = Alumno::count(); // Contamos todos los estudiantes
         $totalCatedraticos = Catedratico::count();
+        $totalTutelares = Tutelar::count();
+        $totalEscuelas = Escuela::count();
         $datosGrafico = $this->getDatosGrafico(); // Obtenemos los datos para el gráfico
         $datosGrafico1= $this->getDatosGrafico1();
 
 
 
-        return view('welcome', compact('totalAlumnos','totalCatedraticos', 'datosGrafico','datosGrafico1'));
+        return view('welcome', compact('totalAlumnos','totalCatedraticos','totalTutelares','totalEscuelas','datosGrafico','datosGrafico1'));
 
 
 

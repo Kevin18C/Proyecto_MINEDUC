@@ -8,6 +8,7 @@ use App\Models\Escuela;
 use App\Models\Grado;
 use App\Models\Inscripcion;
 use App\Models\Municipio;
+use App\Models\Seccion;
 use Illuminate\Http\Request;
 
 class ReportesController extends Controller
@@ -75,7 +76,25 @@ class ReportesController extends Controller
         $municipio_id = $request->input('id_municipio');
         $escuela_id = $request->input('id_escuela');
         $grado_id = $request->input('id_grado');
+        $seccion_id = $request->input('id_seccion');
 
+        $catedraticos = $this->filterCatedraticos($departamento_id, $municipio_id, $escuela_id, $grado_id, $seccion_id);
+
+        $departamentos = Departamento::all();
+        $municipios = Municipio::all();
+        $escuelas = Escuela::all();
+        $grados = Grado::all();
+        $secciones = Seccion::all();
+
+        if ($catedraticos->isEmpty()) {
+            return view('reportes.partials.catedraticos', compact('catedraticos', 'departamentos', 'municipios', 'escuelas', 'grados', 'secciones'))->with('message', 'No se encontraron catedráticos con los filtros aplicados.');
+        }
+
+        return view('reportes.partials.catedraticos', compact('catedraticos', 'departamentos', 'municipios', 'escuelas', 'grados', 'secciones'));
+    }
+
+    private function filterCatedraticos($departamento_id, $municipio_id, $escuela_id, $grado_id, $seccion_id)
+    {
         $query = Catedratico::query();
 
         if ($departamento_id) {
@@ -95,27 +114,14 @@ class ReportesController extends Controller
         }
 
         if ($grado_id) {
-            $catedraticos = Catedratico::whereHas('inscripciones', function ($q) use ($grado_id) {
-                $q->where('id_grado', $grado_id);
-            })->with('inscripciones')->get();
-        } else {
-            $catedraticos = Catedratico::with('inscripciones')->get();
+            $query->where('id_grado', $grado_id);
         }
 
-
-        $catedraticos = $query->with('inscripciones')->get();
-
-        // Depuración: Verificar los datos obtenidos
-        if ($catedraticos->isEmpty()) {
-            return response()->json(['message' => 'No se encontraron catedráticos con los filtros aplicados.'], 404);
+        if ($seccion_id) {
+            $query->where('id_seccion', $seccion_id);
         }
 
-        $departamentos = Departamento::all();
-        $municipios = Municipio::all();
-        $escuelas = Escuela::all();
-        $grados = Grado::all();
-
-        return view('reportes.partials.catedraticos', compact('catedraticos', 'departamentos', 'municipios', 'escuelas', 'grados'));
+        return $query->with('inscripciones')->get();
     }
 
     public function getMunicipios($departamento_id)

@@ -15,7 +15,15 @@ class CreateHorarioDeClaseTable extends Migration
     {
         Schema::create('horario_de_clase', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('id_curso');
+            $table->unsignedBigInteger('id_grado');
+            $table->time('hora_inicio');
+            $table->time('hora_fin');
+            $table->string('dia_semana');
             $table->timestamps();
+
+            $table->foreign('id_curso')->references('id')->on('cursos');
+            $table->foreign('id_grado')->references('id')->on('grados');
         });
     }
 

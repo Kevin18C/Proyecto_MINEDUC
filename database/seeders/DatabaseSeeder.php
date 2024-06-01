@@ -2,6 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Actividad;
+use App\Models\CalendarioDeExamen;
 use Illuminate\Database\Seeder;
 use App\Models\Catedratico;
 use App\Models\Escuela;
@@ -10,6 +12,7 @@ use App\Models\Municipio;
 use App\Models\Grado;
 use App\Models\Curso;
 use App\Models\Seccion;
+use Database\Factories\ActividadesFactory;
 
 class DatabaseSeeder extends Seeder
 {
@@ -26,6 +29,10 @@ class DatabaseSeeder extends Seeder
         $this->call(MunicipioSeeder::class);
         $this->createEscuelasPerMunicipio();
         $this->call(CursoSeeder::class);
+
+        $this->call(HorarioDeClaseSeeder::class);
+        CalendarioDeExamen::factory()->count(10)->create();
+        Actividad::factory()->count(20)->create();
 
         // Cantidad de estudiantes adicionales a crear por escuela
         $estudiantesPorEscuela = 10;

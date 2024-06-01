@@ -30,4 +30,9 @@ class Grado extends Model
     {
         return $this->belongsTo(Escuela::class, 'id_escuela');
     }
+    public function horarios()
+    {
+        return $this->hasMany(HorarioDeClase::class, 'id_grado');
+    }
 }
+
